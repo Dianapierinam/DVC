@@ -1,5 +1,5 @@
 import { setRootEl, setRoutes, onURLChange } from './router.js';
-import  HomeView  from './views/Home.js'; 
+import  HomeView  from '../views/Home.js'; 
 import  ChatView  from './views/Chat.js'; 
 import  Group from './views/GroupChat.js'; 
 import  Calculation  from './views/Calculation.js'; 

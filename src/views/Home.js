@@ -1,7 +1,9 @@
 import{header} from "../components/header.js"
 import{footer} from "../components/footer.js"
 import data from '../data/dataset.js';
-import {navigateTo} from '../router.js';
+//import{cardelement} from "../componentes/card.js"
+//import data from '../data/dataset.js';
+//import {navigateTo} from '../router.js';
 
 
 export function Home(props) {
@@ -11,6 +13,21 @@ export function Home(props) {
 
     // Llama a la función header para obtener el elemento de encabezado
     const headerElement = header();
+
+    // visualizacion de la data de personajes 
+    data.forEach(item => {
+        const cards = document.createElement('div');
+        
+        const imgElement = document.createElement('img');
+        imgElement.src = item.imageUrl;
+        const nameElement = document.createElement('div');
+        nameElement.textContent = item.name;
+        
+        cards.appendChild(imgElement);
+        cards.appendChild(nameElement);
+
+        HomeView.appendChild(cards);
+    });
 
     // Llama a la función footer para obtener el elemento de pie de página
     const footerElement = footer(); // Se agrega esta línea

@@ -1,10 +1,11 @@
-
-
-
+//objeto que mapea las rutas de nuestro sitio
 let ROUTES = {};
+//Referencia al elemento HTML en donde vamos a dibujar el contenido de nuestros componentes 
 let rootEl;
 
 export const setRootEl = (el) => {
+  //valida si "el" es un objeto HTML
+  //despues valida si el elemento exista
   rootEl = el;
 };
 
@@ -12,6 +13,7 @@ export const setRoutes = (routes) => {
   ROUTES = routes;
 };
 
+//Se usa para que la ruta sea mas compleja, que la URL obtenga más elementos 
 const queryStringToObject = (queryString) => {
   const params = new URLSearchParams(queryString.search);
   return Object.fromEntries(params);
