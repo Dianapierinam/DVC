@@ -1,6 +1,7 @@
 import{header} from "../components/header.js"
 import{footer} from "../components/footer.js"
 import data from '../data/dataset.js';
+import { mainfilter } from "../components/mainfilter.js";
 //import{cardelement} from "../componentes/card.js"
 //import data from '../data/dataset.js';
 //import {navigateTo} from '../router.js';
@@ -14,11 +15,14 @@ export function Home(props) {
     // Llama a la función header para obtener el elemento de encabezado
     const headerElement = header();
 
+    //menuresponsive
+    const main = mainfilter();
+
+    // visualizacion de la data de personajes 
     const cardListElement = document.createElement('ul');
     cardListElement.setAttribute('id', 'card-list');
     cardListElement.classList.add('cardList');
 
-    // visualizacion de la data de personajes 
     data.forEach(item => {
         const card = document.createElement('li');
         card.classList.add('card')
