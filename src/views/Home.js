@@ -14,20 +14,34 @@ export function Home(props) {
     // Llama a la función header para obtener el elemento de encabezado
     const headerElement = header();
 
+    const cardListElement = document.createElement('ul');
+    cardListElement.setAttribute('id', 'card-list');
+    cardListElement.classList.add('cardList');
+
     // visualizacion de la data de personajes 
     data.forEach(item => {
-        const cards = document.createElement('div');
+        const card = document.createElement('li');
+        card.classList.add('card')
         
         const imgElement = document.createElement('img');
         imgElement.src = item.imageUrl;
-        const nameElement = document.createElement('div');
-        nameElement.textContent = item.name;
-        
-        cards.appendChild(imgElement);
-        cards.appendChild(nameElement);
+        imgElement.classList.add('cardImg')
 
-        HomeView.appendChild(cards);
+        const cardInfoElement = document.createElement('div');
+        
+        const cardNameElement = document.createElement('h3');
+        cardNameElement.classList.add('cardName');
+        cardNameElement.textContent = item.name;
+        
+        cardInfoElement.appendChild(cardNameElement);
+
+        card.appendChild(imgElement);
+        card.appendChild(cardInfoElement);
+
+        cardListElement.appendChild(card);
     });
+    
+    HomeView.appendChild(cardListElement);
 
     // Llama a la función footer para obtener el elemento de pie de página
     const footerElement = footer(); // Se agrega esta línea

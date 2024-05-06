@@ -1,50 +1,21 @@
+@import "header.css";
+@import "navigation.css";
+@import "footer.css";
+@import "card.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@font-face {
+   font-family: 'londrina';
+   src: url('../fonts/LondrinaSolid-Regular.ttf') format('truetype');
+}
+
 @media screen and (max-width: 768px) {
-body {
-    margin: 0;
-    padding: 0;
-    background-image: url("../img/fondo_de_harry_potter.jpg"); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-}
-.titulo {
-    background-color: beige;
-}
-
-.titulo img {
-    max-width: 150px;
-    margin-left: 120px;
-}
-.buho {
-    display: none;
-}
-
-.check {
-    background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
-}
- 
-.checkbtn {
-    display: block;
-    cursor: pointer;
-    float: right; 
-    margin-right: 20px;
-    margin-top: 20px;
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url("../img/fondo_de_harry_potter.jpg"); 
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; 
     }
-
-
-.checkbtn img {
-    background-color: #ccc;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 24px;
-    height: auto;
-}
-
 }
