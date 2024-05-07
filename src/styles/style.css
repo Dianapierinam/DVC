@@ -2,6 +2,7 @@
 @import "navigation.css";
 @import "footer.css";
 @import "card.css";
+@import "calculation.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 @font-face {
@@ -17,5 +18,29 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover; 
+    }
+
+    button {
+        background-color: #383C37;
+        color: white;
+        border: none;
+        padding: 15px 20px; 
+        border-radius: 20px;
+        top: 153px; 
+        right: 100px; 
+        font-family: Roboto Condensed;
+        cursor: pointer;
+    }
+
+    select {
+        border: none;
+        color: #372e29;
+        background-color: #FFBD59;
+        font-family: Roboto Condensed;
+        font-size: 20px;
+        appearance: none;
+        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 10px;
+        cursor: pointer;
     }
 }

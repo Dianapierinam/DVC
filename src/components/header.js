@@ -13,7 +13,9 @@ export function header() {
             <img src="img/menu responsive.png" alt="Menu responsive">
         </label>
         <nav class="navigation">
-            <span id="close-btn" class="cerrar-button">&times;</span>
+            <label for="check">
+                <span id="close-btn" class="cerrar-button">&times;</span>
+            </label>
             <div class="filtro">
                 <label for="filtrarCasa" class="label-filtro">Filtrar por casa</label>
                 <select id="filtrarCasa" name="casaDeOrigen" data-testid="select-filter" value="">
@@ -54,6 +56,7 @@ export function header() {
         </nav>
     `;
 
-    // Devuelve el elemento de encabezado
-    return headerElement;
-}
+      return headerElement;
+  }
+
+  
