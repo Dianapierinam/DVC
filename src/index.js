@@ -4,6 +4,7 @@ import  ChatView  from './views/Chat.js';
 import  Group from './views/GroupChat.js'; 
 import  Calculation  from './views/Calculation.js'; 
 import ErrorView  from './views/Error.js';
+import data from '../data/dataset.js';
 
 // Obtener el elemento raíz
 const selectRoot = document.getElementById("root");

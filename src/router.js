@@ -19,12 +19,12 @@ const queryStringToObject = (queryString) => {
   return Object.fromEntries(params);
 };
 
-const renderView = (pathname, props = {}) => {
+const renderView = (pathname = "/", props = {}) => {
   rootEl.innerHTML = '';
    rootEl.appendChild(ROUTES[pathname](props));
 };
 
-export const navigateTo = (pathname, props = {}) => {
+export const navigateTo = (pathname = "/", props = {}) => {
   const params = new URLSearchParams(props)
   window.history.pushState(props,"",( window.location.origin + pathname + '?' + params));
   renderView(pathname, props);

@@ -1,3 +1,7 @@
+import { filterData, sortData } from "../lib/dataFunctions.js";
+import { renderCardList } from "../views/home.js";
+import data from '../data/dataset.js';
+
 export function header() {
     // Crea el elemento de encabezado
     const headerElement = document.createElement('header');
@@ -56,7 +60,31 @@ export function header() {
         </nav>
     `;
 
-      return headerElement;
+    const filterChange = () => {
+        let datosFiltrados = data;
+
+        if (elFilterCasa.value) {
+            datosFiltrados = filterData(datosFiltrados,"casaDeOrigen", elFilterCasa.value);
+        }
+
+        if (elFilterRaza.value) {
+            datosFiltrados = filterData(datosFiltrados ,"raza", elFilterRaza.value);
+        }
+
+        datosFiltrados = sortData(datosFiltrados, "name", elOrder.value);
+
+        renderCardList(datosFiltrados);
+    };
+
+    const elFilterCasa = headerElement.querySelector("#filtrarCasa");
+    const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
+    const elOrder = headerElement.querySelector("#order");
+
+    elFilterCasa.addEventListener("change", filterChange);
+    elFilterRaza.addEventListener("change", filterChange);
+    elOrder.addEventListener("change", filterChange);
+
+    return headerElement;
   }
 
   

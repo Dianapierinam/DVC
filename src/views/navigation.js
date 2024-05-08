@@ -11,4 +11,4 @@ closeBtn.addEventListener('click', closeFilter);
 
 function closeFilter() {
     closeCheckbox.click();
-  }
+}

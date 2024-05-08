@@ -1,12 +1,48 @@
-import{header} from "../components/header.js"
-import{footer} from "../components/footer.js"
+import{ header } from "../components/header.js"
+import{ footer } from "../components/footer.js"
 import{ navigateTo } from "../router.js"
 import data from '../data/dataset.js';
 
 //import{cardelement} from "../componentes/card.js"
 //import data from '../data/dataset.js';
 //import {navigateTo} from '../router.js';
+export function renderCardElement(item, cardListElement) {
+    const card = document.createElement('li');
+    card.classList.add('card')
+        
+    const imgElement = document.createElement('img');
+    imgElement.src = item.imageUrl;
+    imgElement.classList.add('cardImg');
 
+    const cardInfoElement = document.createElement('div');
+    
+    const cardNameElement = document.createElement('h');
+    cardNameElement.classList.add('cardName');
+    cardNameElement.textContent = item.name;
+    
+    cardInfoElement.appendChild(cardNameElement);
+
+    card.appendChild(imgElement);
+    card.appendChild(cardInfoElement);
+
+    cardListElement.appendChild(card);
+}  
+
+export function renderCardList(data) {
+    let cardListElement = document.getElementById("card-list");
+
+    if (cardListElement) {
+        cardListElement.innerHTML = "";
+    } else {
+        cardListElement = document.createElement('ul');
+        cardListElement.setAttribute('id', 'card-list');
+        cardListElement.classList.add('cardList');
+    }
+
+    data.forEach((item) => renderCardElement(item, cardListElement));
+
+    return cardListElement;
+};
 
 export function Home(props) {
     // Crea el elemento que contiene la vista de la página principal
@@ -16,35 +52,9 @@ export function Home(props) {
     // Llama a la función header para obtener el elemento de encabezado
     const headerElement = header();
 
-    const cardListElement = document.createElement('ul');
-    cardListElement.setAttribute('id', 'card-list');
-    cardListElement.classList.add('cardList');
-
-    // visualizacion de la data de personajes 
-    data.forEach(item => {
-        const card = document.createElement('li');
-        card.classList.add('card')
-        
-        const imgElement = document.createElement('img');
-        imgElement.src = item.imageUrl;
-        imgElement.classList.add('cardImg')
-
-        const cardInfoElement = document.createElement('div');
-        
-        const cardNameElement = document.createElement('h');
-        cardNameElement.classList.add('cardName');
-        cardNameElement.textContent = item.name;
-        
-        cardInfoElement.appendChild(cardNameElement);
-
-        card.appendChild(imgElement);
-        card.appendChild(cardInfoElement);
-
-        cardListElement.appendChild(card);
-    });
+    const cardListElement = renderCardList(data);
     
     HomeView.appendChild(cardListElement);
-
 
     // Llama a la función footer para obtener el elemento de pie de página
     const footerElement = footer(); // Se agrega esta línea

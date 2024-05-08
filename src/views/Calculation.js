@@ -1,7 +1,10 @@
-//import { calculation } from "../components/calculation";
+import { computeStats } from "../lib/dataFunctions.js";
+import data from '../data/dataset.js';
 
 export function Calculation(props) {
   const CalculationView = document.createElement('div');
+  const year = computeStats(data);
+
   CalculationView.innerHTML = `
   <div id="mostrar-grafica">
   <div id="mostrar-mensaje">
@@ -13,7 +16,7 @@ export function Calculation(props) {
       <div class="textpromedio">
           <div class="textpromedio-container">
               <p>El promedio de los años de nacimiento es:</p>
-              <span id="textpromedio"></span>
+              <span id="textpromedio">${year}</span>
           </div>
       </div>
   </div>
