@@ -1,0 +1,30 @@
+
+#chatfondo {
+    width: 1000px;
+    height: 600px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 50px;
+    margin: auto; /* Para centrar horizontalmente */
+    margin-top: 50px; /* Para agregar un margen superior */
+
+}
+footer {
+    margin-top: 20px; /* Ajusta el margen superior del pie de página según sea necesario */
+}
+.returnChat{
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+@media screen and (max-width: 768px) {
+
+#chatfondo{
+    width: 400px;
+    height: 600px;
+    margin: auto;
+}
+
+
+}

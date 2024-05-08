@@ -1,0 +1,123 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+.card {
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    font-family: "Merienda", cursive;
+    transition: transform 0.3s ease-in-out; 
+    margin: 0 25px 20px 25px; /* Margen igual en todos los lados */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinea el texto centralmente */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+ }
+
+.cardName {
+    margin-top: 20px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 50px;
+    justify-content: center;
+}
+
+
+.chatButton {
+    border-radius: 10px;
+    color: white;
+    background-color: #FFBD59;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; 
+    font-size: 16px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    font-family: "Merienda", cursive;
+    transition: transform 0.3s ease-in-out; 
+    
+}
+.chatButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+ }
+ul{
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .cardList {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0px 20px; 
+        /* justify-content: center; */
+        
+     }
+
+     .card {
+        font-family: "Merienda", cursive;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 300px;
+        margin: 0 15px 20px 30px; /*Margen igual en todos los lados */
+    } 
+    
+    .card img{
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    
+    .cardName {
+       text-align: center;
+    } 
+
+
+    .chatButton {
+        border-radius: 10px;
+        color: white;
+        background-color: #FFBD59;
+        border: none;
+        cursor: pointer;
+        padding: 10px 20px; 
+        font-size: 16px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+        font-family: "Merienda", cursive;
+        transition: transform 0.3s ease-in-out; 
+        
+    }
+    .chatButton:hover {
+        transform: translateY(-5px);
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+     }
+
+}

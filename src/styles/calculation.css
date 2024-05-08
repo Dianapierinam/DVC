@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    .gif {
+        border-radius: 10px;
+        box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .textpromedio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-size: 200% auto;
+        height: 300px;
+        width: 450px;
+        border-radius: 20px;
+        margin-top: 20px;
+        color: #eabe3f;
+        box-shadow: 0 0 20px rgba(234, 190, 63, 1);
+    }
+    }
