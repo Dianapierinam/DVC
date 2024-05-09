@@ -6,6 +6,7 @@ import data from '../data/dataset.js';
 //import{cardelement} from "../componentes/card.js"
 //import data from '../data/dataset.js';
 //import {navigateTo} from '../router.js';
+
 export function renderCardElement(item, cardListElement) {
     const card = document.createElement('li');
     card.classList.add('card')
@@ -43,6 +44,7 @@ export function renderCardList(data) {
 
     return cardListElement;
 };
+
 
 export function Home(props) {
     // Crea el elemento que contiene la vista de la página principal
