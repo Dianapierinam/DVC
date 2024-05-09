@@ -31,4 +31,3 @@ export function Calculation(props) {
 }
 
 export default Calculation;
-

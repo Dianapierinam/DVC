@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
+=======
+>>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
 footer {
     background-color: #FFBD59;
     font-size: 15px;
@@ -19,6 +22,7 @@ footer {
     align-items: center;
     flex-wrap: wrap; 
  }
+<<<<<<< HEAD
  
  .pagina,
  .contact,
@@ -76,3 +80,137 @@ footer {
      }
 
  }
+=======
+ .pagina,
+.contact,
+.social-link {
+   text-align: center; 
+   padding: 0 100px 10px; 
+   flex: 1; 
+}
+.contact {
+   order: 2; 
+}
+
+.pagina {
+   order: 1; 
+}
+
+.social-link {
+   order: 3; 
+}
+
+.pagina {
+  text-align: center; 
+  max-width: 700px; 
+}
+
+.footHarry {
+   height: 60px; 
+   margin-top: 25px;
+}
+
+.foot2 {
+   text-align: justify; 
+   max-width: 800px; 
+}
+
+.icono1 {
+   font-size: 24px; 
+   color: #946b2d; 
+   margin-right: 10px; 
+}
+
+.autores {
+    background-color: #5d5d5d;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: -50px;
+ }
+ 
+.copyright {
+   text-align: center; 
+   color: white;
+   line-height: 50px; 
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        background-color: #FFBD59;
+        font-size: 15px;
+        width: 100%;
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5d5d5d;
+        font-family: "Merienda", cursive;
+        position: relative; 
+        bottom: 0; 
+     }
+     
+     .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap; 
+     }
+     
+     .pagina,
+     .contact,
+     .social-link {
+        text-align: center; 
+        padding: 0 100px 10px; 
+        flex: 1; 
+     }
+     .contact {
+        order: 2; 
+     }
+     
+     .pagina {
+        order: 1; 
+     }
+     
+     .social-link {
+        order: 3; 
+     }
+     
+     .pagina {
+       text-align: center; 
+       max-width: 700px; 
+     }
+     
+     .footHarry {
+        height: 60px; 
+        margin-top: 25px;
+     }
+     
+     .foot2 {
+        text-align: justify; 
+        max-width: 800px; 
+     }
+     
+     .icono1 {
+        font-size: 24px; 
+        color: #946b2d; 
+        margin-right: 10px; 
+     }
+     
+     .autores {
+        background-color: #5d5d5d;
+        width: 100%;
+        height: 50px;
+     }
+     .copyright {
+        text-align: center; 
+        color: white;
+        line-height: 50px; 
+     }
+    
+        footer {
+            height: auto;
+         }
+    
+     }
+>>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086

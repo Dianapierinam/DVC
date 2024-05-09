@@ -1,10 +1,10 @@
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .navigation {
-        display: none; /* Inicialmente oculto */
-    }
+        display: none; 
+    } 
     
     .navigation.show {
-        display: block; /* Mostrar cuando se aplica la clase show */
+        display: block; 
     }
 
     .navigation {
@@ -60,4 +60,4 @@
         font-size: 22px;
         margin-bottom: 8px;
     }
-}
+} */

@@ -1,5 +1,5 @@
 import { filterData, sortData } from "../lib/dataFunctions.js";
-import { renderCardList } from "../views/home.js";
+import { renderCardList } from "../views/Home.js";
 import data from '../data/dataset.js';
 
 export function header() {
@@ -50,7 +50,10 @@ export function header() {
                     <option value="desc">Nombre (Z-A)</option>
                 </select>
             </div>
+            <div id="botonesHeader">
+            <button id="chatGrupal" class = "groupchat">Chat Grupal</button>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
+            </div>
             <div class="buho" id="clearData">
                 <img src="img/buho.png" alt="Buho">
                 <div class="tooltip">Revelio

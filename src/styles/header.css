@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
     header {
         text-align: center;
@@ -41,13 +42,194 @@
      
     .checkbtn {
         display: block;
+=======
+
+.navigation {
+    background-color:#FFBD59;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex; /* Utilizamos flexbox */
+    align-items: center; /* Centramos verticalmente los elementos */
+    width: 90%;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+.navigation label {
+    font-size: 20px; 
+    margin-right: 10px; 
+    color: white;
+    font-family: "Merienda", cursive;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3); 
+}
+.label-filtro {
+    font-size: 25px;
+ } 
+ .nav {
+    list-style: none;
+    padding: 20px;
+    justify-content: center;
+    color: #372e29;
+ }
+ .navigation .filtro {
+    margin-left: 40px;
+ }
+ select{
+    border: none;
+    color: #372e29;
+    background-color: #FFBD59;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    appearance: none;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1); 
+    margin: 0 10px; 
+    cursor: pointer;
+ }
+ select:focus {
+    outline: none;
+ }
+header {
+    padding: 7px 0;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+}
+
+.titulo img {
+    max-width: 400px;
+    margin: auto; 
+}
+
+.checkbtn img {
+    display: none;
+} 
+
+.check {
+    display: none;
+} 
+
+
+.buho img {
+    max-width: 110px;
+    position: absolute; 
+    top: 8px; 
+    right: 200px; 
+    padding: 0px;
+    cursor: pointer;
+}
+.tooltip {
+    max-width: 50px;
+    position: absolute; 
+    top: 80px;
+    right: 225px;
+    cursor: pointer;
+    font-size: 15px;
+    color: black;
+    border-radius: 100%; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding: 5px; 
+    border: 1px solid white; 
+ 
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #filterButton{
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+#chatGrupal{
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#close-btn{
+    display: none;
+} 
+#botonesHeader{
+    margin-left: 50px;
+}
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none; 
+    } 
+    
+    .navigation.show {
+        display: block; 
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFBD59;
+        height: 100%;
+        width: 80%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        margin: 0px;
+        padding: 0px;
+        transition: all .3s ease;
+        text-align: left;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 7px 7px rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        font-family: 'londrina';
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        
+    }
+
+    .navigation .filtro {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 5px 0px;
+        margin-bottom: 8px;
+    }
+    .checkbtn {
+>>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
         cursor: pointer;
         float: right; 
         margin-right: 20px;
         margin-top: 20px;
+<<<<<<< HEAD
         }
     
     
+=======
+    }
+
+>>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
     .checkbtn img {
         background-color: #ccc;
         position: absolute;
@@ -55,6 +237,54 @@
         right: 30px;
         width: 24px;
         height: auto;
+<<<<<<< HEAD
     }
 
 }
+=======
+        display: block;
+    }
+    .buho img {
+        bottom: 10px; /* Posiciona la imagen 10px desde el borde inferior */
+        right: 10px;
+        width: 80px; 
+        transition: all .3s ease; 
+        margin: 200px 100px 0 0;
+    }
+    
+
+    .tooltip {
+        display: none;
+    }
+    
+    #close-btn {
+        display: block; 
+  
+    }
+    .check:checked ~ .navigation,
+    .check:checked ~ .navigation .buho {
+        right: 0;
+    } 
+
+    .cerrar-button {
+        display: block;
+        font-family: auto;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+    }
+
+    .navigation button {
+        margin-top: 20px;
+    }
+
+    .label-filtro {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+}
+
+
+
+>>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086

@@ -1,7 +1,12 @@
-export function Group(props) {
-    const GroupView = document.createElement('div');
-    GroupView.textContent = 'Welcome to the home page!';
-    return GroupView;
-}
+import { footer } from "../components/footer.js";
+import { groupChat } from "../components/groupchat.js";
 
-export default Group;
+export default function groupChatView() {
+    const element = document.createElement('div');
+    const groupElement = groupChat();
+    const footerElement = footer(); 
+    // Agrega el pie de página al final del contenido de la página principal
+    element.appendChild(groupElement); 
+    element.appendChild(footerElement); 
+    return element;
+}

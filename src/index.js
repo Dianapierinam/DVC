@@ -6,6 +6,7 @@ import  Calculation  from './views/Calculation.js';
 import ErrorView  from './views/Error.js';
 import data from '../data/dataset.js';
 
+
 // Obtener el elemento raíz
 const selectRoot = document.getElementById("root");
 
@@ -24,7 +25,7 @@ setRoutes(routes);
 // Establecer el elemento raíz donde se renderizarán las vistas
 window.addEventListener("DOMContentLoaded", () => {
   setRootEl(selectRoot);
-  onURLChange(window.location); // Corregido: 'window' en minúsculas
+  onURLChange(window.location);
 });
 
 // Manejar la carga inicial de la URL
