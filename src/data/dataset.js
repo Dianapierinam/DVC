@@ -76,7 +76,7 @@ export default [ //todo esto es un arrey de objetos
   },
   {
     "id": "lord_voldemort",
-        "name": "Lord Voldemort (Tom Riddle)",
+        "name": "Lord Voldemort",
         "shortDescription": "Uno de los magos más oscuros de todos los tiempos, cuyo verdadero nombre es Tom Riddle.",
         "description": "Lord Voldemort, nacido como Tom Marvolo Riddle, es uno de los magos más oscuros de todos los tiempos. Surgió como una amenaza durante la Primera y Segunda Guerra de los Magos, siendo conocido por su ambición desmedida y su búsqueda de la inmortalidad. Riddle fue responsable de la muerte de los padres de Harry Potter y de una ola de terror en el mundo mágico. Su nombre se convirtió en sinónimo de miedo y sus seguidores eran temidos por su crueldad y fanatismo.",
         "imageUrl": "https://i.pinimg.com/736x/9a/19/b7/9a19b77081487a97f3e91700c064763b.jpg",

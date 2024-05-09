@@ -17,7 +17,7 @@ const queryStringToObject = (queryString) => {
   return Object.fromEntries(params);
 };
 
-const renderView = (pathname, props = {}) => {
+const renderView = (pathname ="/", props = {}) => {
   rootEl.innerHTML = '';
    rootEl.appendChild(ROUTES[pathname](props));
 };

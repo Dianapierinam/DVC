@@ -1,8 +1,6 @@
 export function footer() {
-    // Crea el elemento de encabezado
     const footerElement = document.createElement('footer');
 
-    // Agrega el contenido dinámico al encabezado
     footerElement.innerHTML = `
     <footer>
     <div class="footer">
@@ -34,6 +32,5 @@ export function footer() {
 </div>
     `;
 
-    // Devuelve el elemento de encabezado
     return footerElement;
 }

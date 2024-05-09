@@ -1,3 +1,7 @@
+import { filterData, sortData } from "../lib/dataFunctions.js";
+import { renderCardList } from "../views/Home.js";
+import data from '../data/dataset.js';
+
 export function header() {
     // Crea el elemento de encabezado
     const headerElement = document.createElement('header');
@@ -13,7 +17,9 @@ export function header() {
             <img src="img/menu responsive.png" alt="Menu responsive">
         </label>
         <nav class="navigation">
-            <span id="close-btn" class="cerrar-button">&times;</span>
+            <label for="check">
+                <span id="close-btn" class="cerrar-button">&times;</span>
+            </label>
             <div class="filtro">
                 <label for="filtrarCasa" class="label-filtro">Filtrar por casa</label>
                 <select id="filtrarCasa" name="casaDeOrigen" data-testid="select-filter" value="">
@@ -44,7 +50,10 @@ export function header() {
                     <option value="desc">Nombre (Z-A)</option>
                 </select>
             </div>
+            <div id="botonesHeader">
+            <button id="chatGrupal" class = "groupchat">Chat Grupal</button>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
+            </div>
             <div class="buho" id="clearData">
                 <img src="img/buho.png" alt="Buho">
                 <div class="tooltip">Revelio
@@ -54,6 +63,31 @@ export function header() {
         </nav>
     `;
 
-    // Devuelve el elemento de encabezado
+    const filterChange = () => {
+        let datosFiltrados = data;
+
+        if (elFilterCasa.value) {
+            datosFiltrados = filterData(datosFiltrados,"casaDeOrigen", elFilterCasa.value);
+        }
+
+        if (elFilterRaza.value) {
+            datosFiltrados = filterData(datosFiltrados ,"raza", elFilterRaza.value);
+        }
+
+        datosFiltrados = sortData(datosFiltrados, "name", elOrder.value);
+
+        renderCardList(datosFiltrados);
+    };
+
+    const elFilterCasa = headerElement.querySelector("#filtrarCasa");
+    const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
+    const elOrder = headerElement.querySelector("#order");
+
+    elFilterCasa.addEventListener("change", filterChange);
+    elFilterRaza.addEventListener("change", filterChange);
+    elOrder.addEventListener("change", filterChange);
+
     return headerElement;
-}
+  }
+
+  
