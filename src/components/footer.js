@@ -1,12 +1,10 @@
 export function footer() {
-<<<<<<< HEAD
     // Crea el elemento de encabezado
     const footerContainerElement = document.createElement('div');
-=======
->>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
     const footerElement = document.createElement('footer');
     const autorsElement = document.createElement('div');
 
+    // Agrega el contenido dinámico al encabezado
     footerElement.innerHTML = `
     <div class="footer">
         <div class="pagina">
@@ -40,10 +38,6 @@ export function footer() {
     footerContainerElement.appendChild(footerElement);
     footerContainerElement.appendChild(autorsElement);
 
-<<<<<<< HEAD
     // Devuelve el elemento de encabezado
     return footerContainerElement;
-=======
-    return footerElement;
->>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
 }

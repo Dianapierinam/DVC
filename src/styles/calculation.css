@@ -1,9 +1,14 @@
-@media screen and (max-width: 768px) {
-<<<<<<< HEAD
+#calculation {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+}
+
 .gif {
     border-radius: 10px;
     box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 }
+
 .textpromedio {
     display: flex;
     align-items: center;
@@ -19,10 +24,29 @@
     color: #eabe3f;
     box-shadow: 0 0 20px rgba(234, 190, 63, 1);
 }
+
+button {
+    background-color: #383C37;
+    color: white;
+    border: none;
+    padding: 15px 20px; 
+    border-radius: 20px;
+    top: 153px; 
+    right: 100px; 
+    font-family: Roboto Condensed;
+    cursor: pointer;
 }
-=======
+
+
+@media screen and (max-width: 768px) {
+    #calculation {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .gif {
         border-radius: 10px;
+        width: 90%;
         box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
     }
     .textpromedio {
@@ -34,11 +58,14 @@
         background-color: rgba(0, 0, 0, 0.8);
         background-size: 200% auto;
         height: 300px;
-        width: 450px;
+        width: 90%;
         border-radius: 20px;
         margin-top: 20px;
         color: #eabe3f;
         box-shadow: 0 0 20px rgba(234, 190, 63, 1);
     }
+    .returnmobile {
+        margin-left: 75%;
+        margin-top: 10%;
     }
->>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
+    }

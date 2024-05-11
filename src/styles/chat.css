@@ -1,4 +1,3 @@
-
 #chatfondo {
     width: 1000px;
     height: 600px;
@@ -6,7 +5,7 @@
     border-radius: 50px;
     margin: auto; /* Para centrar horizontalmente */
     margin-top: 50px; /* Para agregar un margen superior */
-
+    
 }
 footer {
     margin-top: 20px; /* Ajusta el margen superior del pie de página según sea necesario */
@@ -25,6 +24,4 @@ footer {
     height: 600px;
     margin: auto;
 }
-
-
 }

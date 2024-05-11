@@ -1,3 +1,5 @@
+import { getDataInLocalStorage } from "./lib/localStorage.js";
+
 //objeto que mapea las rutas de nuestro sitio
 let ROUTES = {};
 //Referencia al elemento HTML en donde vamos a dibujar el contenido de nuestros componentes 
@@ -19,13 +21,9 @@ const queryStringToObject = (queryString) => {
   return Object.fromEntries(params);
 };
 
-<<<<<<< HEAD
 const renderView = (pathname = "/", props = {}) => {
-=======
-const renderView = (pathname ="/", props = {}) => {
->>>>>>> 26eb1bc3ba363b806edbc3c3cc4bf9e0f940b086
   rootEl.innerHTML = '';
-   rootEl.appendChild(ROUTES[pathname](props));
+  rootEl.appendChild(ROUTES[pathname](props));
 };
 
 export const navigateTo = (pathname = "/", props = {}) => {
@@ -35,10 +33,16 @@ export const navigateTo = (pathname = "/", props = {}) => {
 };
 
 export const onURLChange = (location) => {
-    console.log(location)
   const { pathname, search } = location;
-  const searchParams = queryStringToObject(search);
-  renderView(pathname, searchParams);
+  const apiKey = getDataInLocalStorage("api-key");
+
+  if (apiKey) {
+    const searchParams = queryStringToObject(search);
+    renderView(pathname, searchParams);
+  } else {
+    navigateTo("/api-key");
+  }
+
 };
 
 

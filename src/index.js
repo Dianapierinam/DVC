@@ -2,6 +2,7 @@ import { setRootEl, setRoutes, onURLChange } from './router.js';
 import  HomeView  from '../views/Home.js'; 
 import  ChatView  from './views/Chat.js'; 
 import  Group from './views/GroupChat.js'; 
+import  ApiKey from './views/ApiKey.js';
 import  Calculation  from './views/Calculation.js'; 
 import ErrorView  from './views/Error.js';
 import data from '../data/dataset.js';
@@ -13,6 +14,7 @@ const selectRoot = document.getElementById("root");
 // Definir las rutas y sus vistas asociadas
 const routes = {
   '/': HomeView,
+  '/api-key': ApiKey,
   '/calculation': Calculation,
   '/chat': ChatView,
   '/groupChat': Group,

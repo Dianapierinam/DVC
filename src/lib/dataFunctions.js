@@ -3,6 +3,11 @@ export const filterData = (data, filterBy, value) => {
 };
   
 export const sortData = (data, sortBy, sortOrder) => {
+  
+  if (sortOrder == "") {
+    return data;
+  }
+
   if (sortBy === 'name') {
     if (sortOrder === 'asc') {
       return data.slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -27,9 +32,9 @@ export const computeStats = (data) => {
     }
     return null; 
   }).filter((year) => year !== null); 
-  //número de personas
+
   const totalPeople = validYears.length;
-  //usar reduce par obtener la suma total de los años validos
+
   const totalYearSum = validYears.reduce((sum, year) => {
     sum += year; 
     return sum;

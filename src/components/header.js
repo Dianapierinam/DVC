@@ -50,10 +50,7 @@ export function header() {
                     <option value="desc">Nombre (Z-A)</option>
                 </select>
             </div>
-            <div id="botonesHeader">
-            <button id="chatGrupal" class = "groupchat">Chat Grupal</button>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
-            </div>
             <div class="buho" id="clearData">
                 <img src="img/buho.png" alt="Buho">
                 <div class="tooltip">Revelio
@@ -82,12 +79,25 @@ export function header() {
     const elFilterCasa = headerElement.querySelector("#filtrarCasa");
     const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
     const elOrder = headerElement.querySelector("#order");
+    const filterButton = headerElement.querySelector('#filterButton'); 
 
     elFilterCasa.addEventListener("change", filterChange);
     elFilterRaza.addEventListener("change", filterChange);
     elOrder.addEventListener("change", filterChange);
 
+    filterButton.addEventListener("click", borrarFiltros);
+    function borrarFiltros() {
+        elFilterCasa.value = ""; 
+        elFilterRaza.value = ""; 
+        elOrder.value = "";
+        filterChange(); 
+}
+
     return headerElement;
-  }
+}
+
+
+
+
 
   
