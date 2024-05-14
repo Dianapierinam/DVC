@@ -21,7 +21,7 @@ export function Calculation(props) {
       </div>
   </div>
   <div class="returnmobile">
-      <button id="return">Regresar</button>
+      <button onclick="history.back()" id="return">Regresar</button>
   </div>
   <div id="varita"></div>
   

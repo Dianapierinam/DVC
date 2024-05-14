@@ -50,6 +50,9 @@ export function header() {
                     <option value="desc">Nombre (Z-A)</option>
                 </select>
             </div>
+            <div>
+            <button id="chatGrupal" class="groupchat">Chat Grupal</button>
+            </div>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
             <div class="buho" id="clearData">
                 <img src="img/buho.png" alt="Buho">

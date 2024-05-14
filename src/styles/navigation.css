@@ -78,8 +78,8 @@ header {
 .tooltip {
     max-width: 50px;
     position: absolute; 
-    top: 80px;
-    right: 225px;
+    top: 100px;
+    right: 130px;
     cursor: pointer;
     font-size: 15px;
     color: black;
@@ -111,10 +111,11 @@ header {
 
 #filterButton {
     border-radius: 10px;
-    padding: 10px 20px; 
     font-size: 16px;
+    padding: 10px 20px;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: 200px;
 }
 
 
