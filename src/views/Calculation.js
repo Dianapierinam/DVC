@@ -15,7 +15,7 @@ export function Calculation(props) {
       <img class="gif" src="img/G75K.gif" alt="">
       <div class="textpromedio">
           <div class="textpromedio-container">
-              <p>El promedio de los años de nacimiento es:</p>
+              <p>La mayoria de personajes nacieron en:</p>
               <span id="textpromedio">${year}</span>
           </div>
       </div>
@@ -24,6 +24,7 @@ export function Calculation(props) {
       <button id="return">Regresar</button>
   </div>
   <div id="varita"></div>
+  
 
   `;
   

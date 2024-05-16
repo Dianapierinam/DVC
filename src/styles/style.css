@@ -6,7 +6,9 @@
 @import url('masInfo.css');
 @import url('navigation.css');
 @import url('calculation.css');
+@import url('api-key.css');
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+
 @font-face {
    font-family: 'londrina';
    src: url('../fonts/LondrinaSolid-Regular.ttf') format('truetype');
@@ -33,17 +35,6 @@ body {
         background-size: cover; 
     }
 
-    button {
-        background-color: #383C37;
-        color: white;
-        border: none;
-        padding: 15px 20px; 
-        border-radius: 20px;
-        top: 153px; 
-        right: 100px; 
-        font-family: Roboto Condensed;
-        cursor: pointer;
-    }
 
     select {
         border: none;

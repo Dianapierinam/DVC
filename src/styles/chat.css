@@ -6,6 +6,8 @@
     border-radius: 50px;
     margin: auto; /* Para centrar horizontalmente */
     margin-top: 50px; /* Para agregar un margen superior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 
 }
 footer {
@@ -17,6 +19,23 @@ footer {
     font-size: 16px;
     cursor: pointer; 
 }
+#person-consult {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 45%;
+    margin-left: 20px;
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    background-color: #FFBD59;
+}
+#sendButton{
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -24,6 +43,17 @@ footer {
     width: 400px;
     height: 600px;
     margin: auto;
+}
+
+#person-consult {
+    width: 60%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 120%;
+    margin-left: 20px;
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    background-color: #FFBD59;
 }
 
 

@@ -1,0 +1,27 @@
+.api-key-container {
+    color: white;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 50px 20px;
+}
+
+.api-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.api-botones label {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.api-botones button {
+    width: 200px;
+}

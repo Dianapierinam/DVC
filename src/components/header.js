@@ -82,12 +82,27 @@ export function header() {
     const elFilterCasa = headerElement.querySelector("#filtrarCasa");
     const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
     const elOrder = headerElement.querySelector("#order");
+    const filterButton = headerElement.querySelector('#filterButton'); 
 
     elFilterCasa.addEventListener("change", filterChange);
     elFilterRaza.addEventListener("change", filterChange);
     elOrder.addEventListener("change", filterChange);
 
+    filterButton.addEventListener("click", borrarFiltros);
+    function borrarFiltros() {
+        elFilterCasa.value = ""; 
+        elFilterRaza.value = ""; 
+        elOrder.value = "";
+        filterChange(); 
+}
+
     return headerElement;
-  }
+}
+
+
+
+
+
+  
 
   
