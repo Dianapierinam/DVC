@@ -1,4 +1,4 @@
-const keyName = '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'
+
 
 export const getDataInLocalStorage = (keyName) => {
   const data = localStorage.getItem(keyName);
