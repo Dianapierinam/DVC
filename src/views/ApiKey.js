@@ -1,4 +1,4 @@
-import { setDataInLocalStorage } from "../lib/localStorage.js";
+import { setDataInLocalStorage } from "../lib/ApiKey.js";
 import { navigateTo } from "../router.js";
 
 export default function ApiKey() {

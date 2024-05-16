@@ -1,4 +1,4 @@
-import { getDataInLocalStorage } from "./lib/localStorage.js";
+import { getDataInLocalStorage } from "./lib/ApiKey.js"
 
 //objeto que mapea las rutas de nuestro sitio
 let ROUTES = {};

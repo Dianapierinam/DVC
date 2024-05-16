@@ -1,4 +1,4 @@
-import { filterData, sortData } from "../lib/dataFunctions.js";
+import { filterData, sortData } from "../lib/DataFunctions.js";
 import { renderCardList } from "../views/Home.js";
 import data from '../data/dataset.js';
 
