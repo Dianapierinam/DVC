@@ -1,5 +1,3 @@
-
-
 export const getDataInLocalStorage = (keyName) => {
   const data = localStorage.getItem(keyName);
 

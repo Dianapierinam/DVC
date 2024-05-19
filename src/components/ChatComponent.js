@@ -1,4 +1,4 @@
-export function ChatComponent(dsadsadasd) {
+export function ChatComponent() {
     const chatElement = document.createElement('div');
     chatElement.classList.add("chat");
 

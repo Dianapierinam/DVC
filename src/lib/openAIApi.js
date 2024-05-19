@@ -1,39 +1,43 @@
-async function getCompletion(character, shortdescription, prompt) {
+import { getDataInLocalStorage } from "./ApiKey.js";
 
-    const conversation = [
-        {rol: "system", content: ` Eres ${character}, ${shortdescription}. responde a todas las preguntas que puedas relacionadas a tu vida en la pelicula, con un limite de 100 palabras aproximadamente.`
-          }, 
-        {rol: "user", content: prompt}
-    ]
+export const communicateWithOpenAI = (name, description, prompt) => {
+    const url = "https://api.openai.com/v1/chat/completions";
+    const apiKey = getDataInLocalStorage('api-key');
+    const apiRequest = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo-1106',
+        messages: [
+          {
+            role: "system", content: ` Eres ${name}, ${description}. responde a todas las preguntas que puedas relacionadas a tu vida en la pelicula, con un limite de 100 palabras aproximadamente.`
+          },
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
+      }),
+    };
+
+    let response;
     
-    const res = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        Headers: {
-            'Content-type': 'application/json',
-            'Authorization': 'Bearer ' + api_key
-        },
-        body: JSON.stringify({
-            model: 'gpt-3.5-turbo-1106',
-            messages: conversation
-            //max_tokens: 5,
-            //temperature
+    fetch(url, apiRequest)
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch((error) => {
+            console.error("error en la solicitud", error);
+        });
+
+    return response;
+};
 
 
-
-        })
-    })
-
-    const data = await res.json()
-    console.log(data)
-}
-getCompletion()
-
-
-return fetch ('https://api.openai.com/v1/chat/completions', openAI)
-   .then (response => {
-    return response.json();
-   }).then(data => {
-   return data.choices [0].messasge.content;
-}).catch(error =>{
-    throw error
-});
+/* fetch
+    - then para convertir a json - tiene funcion
+    - then para ya obtener en json - tiene funcion
+    - catch para manejar errores
+*/
