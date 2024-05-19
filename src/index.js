@@ -1,10 +1,10 @@
 import { setRootEl, setRoutes, onURLChange } from './router.js';
-import  HomeView  from '../views/Home.js'; 
-import  ChatView  from './views/ChatView.js'; 
-import  Group from './views/GroupChat.js'; 
-import  ApiKey from '../views/ApiKey.js';
-import  Calculation  from './views/Calculation.js'; 
-import ErrorView  from './views/Error.js';
+import HomeView from '../views/Home.js'; 
+import ChatView from './views/ChatView.js'; 
+import GroupChatView from './views/GroupChatView.js'; 
+import ApiKey from './views/ApiKey.js';
+import CalculationView from './views/CalculationView.js'; 
+import ErrorView from './views/Error.js';
 import data from '../data/dataset.js';
 
 
@@ -15,9 +15,9 @@ const selectRoot = document.getElementById("root");
 const routes = {
   '/': HomeView,
   '/api-key': ApiKey,
-  '/calculation': Calculation,
+  '/calculation': CalculationView,
   '/chat': ChatView,
-  '/groupChat': Group,
+  '/group-chat': GroupChatView,
   '/error': ErrorView, 
 };
 
@@ -34,6 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("popstate", () => {
   onURLChange(window.location.href);
 });
+
 
 
 

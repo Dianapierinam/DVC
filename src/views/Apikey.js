@@ -1,4 +1,4 @@
-import { setDataInLocalStorage } from "../lib/ApiKey.js";
+import { setDataInLocalStorage } from "./lib/ApiKey.js";
 import { navigateTo } from "../router.js";
 
 export default function ApiKey() {
@@ -25,7 +25,7 @@ export default function ApiKey() {
     checkboxElement.addEventListener('change', function() {
       
         if (this.checked) {
-          inputKeyElement.value = "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";
+          inputKeyElement.value = "axaxa";
         } else {
           inputKeyElement.value = ""; 
         }

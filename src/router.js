@@ -1,4 +1,4 @@
-import { getDataInLocalStorage } from "./lib/ApiKey.js";
+import { getDataInLocalStorage } from "./lib/ApiKey.js"
 
 //objeto que mapea las rutas de nuestro sitio
 let ROUTES = {};
@@ -44,6 +44,9 @@ export const onURLChange = (location) => {
   }
 
 };
+
+
+
 
 
 

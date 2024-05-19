@@ -1,11 +1,10 @@
+import { ChatComponent } from "../components/ChatComponent.js";
 
-import { groupChat } from "../components/groupchat.js";
+export default function GroupChatView() {
+    const groupChatViewElement = document.createElement('div');
+    const groupChatComponentElement = ChatComponent();
+   
+    groupChatViewElement.appendChild(groupChatComponentElement); 
 
-export default function groupChatView() {
-    const element = document.createElement('div');
-    const groupElement = groupChat();
-
-    // Agrega el pie de página al final del contenido de la página principal
-    element.appendChild(groupElement); 
-    return element;
+    return groupChatViewElement;
 }

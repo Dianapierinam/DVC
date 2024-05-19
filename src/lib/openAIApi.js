@@ -1,44 +1,43 @@
-// Importa la función para obtener la API KEY desde apiKey.js
-import { getApiKey } from './ApiKey.js';
+import { getDataInLocalStorage } from "../ApiKey.js";
 
+export const communicateWithOpenAI = (name, description, prompt) => {
+    const url = "https://api.openai.com/v1/chat/completions";
+    const apiKey = getDataInLocalStorage('api-key');
+    const apiRequest = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: 'gpt-3.5-turbo-1106',
+        messages: [
+          {
+            role: "system", content: ` Eres ${name}, ${description}. responde a todas las preguntas que puedas relacionadas a tu vida en la pelicula, con un limite de 100 palabras aproximadamente.`
+          },
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
+      }),
+    };
 
-export const communicateWithOpenAI = (messages) => {
-   //Aquí es donde debes implementar la petición con fetch o axios
-   const key = getApiKey();
-   const openAI = {
-    method: 'POST',
-    header:{
-     'Content-Type':'application/json',
-     'Authorization': `Bearer ${key}`,
-    },
+    let response;
+    
+    fetch(url, apiRequest)
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch((error) => {
+            console.error("error en la solicitud", error);
+        });
 
-    body: JSON.stringify ({
-        model: "gpt-3.5-turbo",
-        messages :[
-            {
-                role :"system",
-                content: "You are the character from the Harry Potter saga, act like him or her."
-            },
-
-
-    ]
-        
-
-
-    }),
-
-
-
-
-   };
-   return fetch ('https://api.openai.com/v1/chat/completions', openAI)
-   .then (response => {
-
-    return response.json();
-   }).then(data => {
-
-   return data.choices [0].messasge.content;
-}).catch(error =>{
-    throw error
-});
+    return response;
 };
+
+
+/* fetch
+    - then para convertir a json - tiene funcion
+    - then para ya obtener en json - tiene funcion
+    - catch para manejar errores
+*/
