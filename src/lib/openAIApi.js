@@ -24,15 +24,14 @@ export const communicateWithOpenAI = (name, description, prompt) => {
     };
 
     let response;
-    
-    fetch(url, apiRequest)
+   return fetch(url, apiRequest)
         .then(res => res.json())
         .then(res => console.log(res))
         .catch((error) => {
             console.error("error en la solicitud", error);
         });
 
-    return response;
+    //return response;
 };
 
 

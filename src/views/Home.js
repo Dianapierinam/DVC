@@ -25,7 +25,11 @@ export function renderCardElement(item, cardListElement) {
     chatButton.className = 'chatButton';
 
     chatButton.addEventListener('click', function() {
-        navigateTo("/chat");
+       const params = {
+            character_id: item.id,
+        }; 
+
+        navigateTo("/chat", params);
     });
 
     cardInfoElement.appendChild(cardNameElement);

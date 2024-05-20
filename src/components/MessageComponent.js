@@ -1,5 +1,4 @@
-export function MessageComponent(message) {
-    const message = "";
+export function MessageComponent(message, modifierClass) {
     const messageElement = document.createElement('li');
 
     messageElement.classList.add("message");
