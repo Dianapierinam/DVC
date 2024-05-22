@@ -25,14 +25,14 @@
     box-shadow: 0 0 20px rgba(234, 190, 63, 1);
 }
 
-button {
+.btn-return {
     background-color: #383C37;
     color: white;
     border: none;
     padding: 15px 20px; 
     border-radius: 20px;
-    top: 153px; 
-    right: 100px; 
+    top: 200px; 
+    margin-right: 200px; 
     font-family: Roboto Condensed;
     cursor: pointer;
 }

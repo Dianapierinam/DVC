@@ -18,6 +18,23 @@
     font-size: 16px;
     cursor: pointer; 
 }
+#person-consult {
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-top: 45%;
+    margin-left: 20px;
+    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+    background-color: #FFBD59;
+}
+#sendButton{
+    border-radius: 10px;
+    padding: 10px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+}
+
 
 .sendMessage {
     border-radius: 10px;

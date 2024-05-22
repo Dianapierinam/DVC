@@ -17,7 +17,7 @@ export default function ChatView() {
     const chatComponentElement = ChatComponent(character);
     chatViewElement.appendChild(chatComponentElement);
     
-    communicateWithOpenAI("Harry Potter", "Protagonista de Harry Potter", "Dime quienes son tus padres");
+   // communicateWithOpenAI("Harry Potter", "Protagonista de Harry Potter", "Dime quienes son tus padres");
   
    
     return chatViewElement;

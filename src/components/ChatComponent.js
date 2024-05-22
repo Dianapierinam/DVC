@@ -30,6 +30,7 @@ export function ChatComponent(character) {
     const list = chatElement.querySelector("#message-list");
     const form = chatElement.querySelector('#message-form');
     const textarea = chatElement.querySelector('#message-input');
+    
 
     function onSubmit(formulario) {
         formulario.preventDefault();
@@ -46,6 +47,7 @@ export function ChatComponent(character) {
         list.appendChild(messageElement);
 
         formulario.target.reset();
+        
 
         communicateWithOpenAI(characterName, characterDescription, userInput)
             .then(res => res.json())
