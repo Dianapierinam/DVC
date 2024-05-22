@@ -53,6 +53,8 @@
     .chat {
         height: 100vh;
         width: 100vw;
+        margin-top: 115px;
+        overflow-y: auto;
     }
 
     .chat .btn-return {
@@ -79,9 +81,11 @@
     .chat .chat-message-list {
         display: flex;
         flex-direction: column;
-        padding-left: 0px;
-        height: 65%;
         max-height: 470px;
+        margin-top: 10px;
+        padding: 20px;
+        height: 430px;
+        overflow-y: auto;
     }
 
     .chat .chat-message-list .message {
@@ -89,10 +93,12 @@
        padding: 10px;
        color: white;
        width: 70%;
+       
     }
 
     .chat .chat-message-list .message.received {
         background-color: #4c4c4c;
+      
     }
 
     .chat .chat-message-list .message.sent {

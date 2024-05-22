@@ -27,8 +27,7 @@ export function renderCardElement(item, cardListElement) {
     chatButton.addEventListener('click', function() {
        const params = {
             character_id: item.id,
-        }; 
-
+        };
         navigateTo("/chat", params);
     });
 
@@ -76,7 +75,7 @@ export function Home(props) {
     const groupBtn = HomeView.querySelector(".groupchat");
     if (groupBtn) {
         groupBtn.addEventListener('click', function() {
-            navigateTo("/groupChat");
+            navigateTo("/group-chat");
         });
     }
 

@@ -23,20 +23,8 @@ export const communicateWithOpenAI = (name, description, prompt) => {
       }),
     };
 
-    let response;
-   return fetch(url, apiRequest)
-        .then(res => res.json())
-        .then(res => console.log(res))
-        .catch((error) => {
-            console.error("error en la solicitud", error);
-        });
-
-    //return response;
+   
+   return fetch(url, apiRequest);
 };
 
 
-/* fetch
-    - then para convertir a json - tiene funcion
-    - then para ya obtener en json - tiene funcion
-    - catch para manejar errores
-*/

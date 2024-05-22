@@ -8,11 +8,17 @@ export default function ChatView() {
     const characterId = params.get('character_id');
     const character = data.find(persona => persona.id == characterId);
   // usar una condicional para en caso de que character no tuviera id, con el navigate to te mande a home
+        if(!character) {
+            window.location.href = '/';
+            return ;
+        }
+        
+        
     const chatComponentElement = ChatComponent(character);
-    
-   // communicateWithOpenAI("Harry Potter", "Protagonista de Harry Potter", "Dime quienes son tus padres");
-  
     chatViewElement.appendChild(chatComponentElement);
+    
+    communicateWithOpenAI("Harry Potter", "Protagonista de Harry Potter", "Dime quienes son tus padres");
+  
    
     return chatViewElement;
 }

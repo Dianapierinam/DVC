@@ -1,7 +1,7 @@
 import { setRootEl, setRoutes, onURLChange } from './router.js';
 import HomeView from '../views/Home.js'; 
 import ChatView from './views/ChatView.js'; 
-import GroupChatView from './views/GroupChatView.js'; 
+import Gropuview from './views/GroupChatView.js'; 
 import ApiKey from './views/ApiKey.js';
 import CalculationView from './views/CalculationView.js'; 
 import ErrorView from './views/Error.js';
@@ -17,7 +17,7 @@ const routes = {
   '/api-key': ApiKey,
   '/calculation': CalculationView,
   '/chat': ChatView,
-  '/group-chat': GroupChatView,
+  '/group-chat': Gropuview,
   '/error': ErrorView, 
 };
 
