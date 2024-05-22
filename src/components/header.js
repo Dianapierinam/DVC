@@ -51,7 +51,7 @@ export function header() {
                 </select>
             </div>
             <div>
-            <button id="chatGrupal" class="groupchat">Chat Grupal</button>
+            <button id="chatGrupal" class="group-chat">Chat Grupal</button>
             </div>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
             <div class="buho" id="clearData">
@@ -102,13 +102,5 @@ export function header() {
 
 
 
-
-  
-
-
-
-
-
-  
 
   

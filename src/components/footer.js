@@ -1,8 +1,11 @@
 export function footer() {
+    // Crea el elemento de encabezado
+    const footerContainerElement = document.createElement('div');
     const footerElement = document.createElement('footer');
+    const autorsElement = document.createElement('div');
 
+    // Agrega el contenido dinámico al encabezado
     footerElement.innerHTML = `
-    <footer>
     <div class="footer">
         <div class="pagina">
             <img class="footHarry" src="img/titulo.png" alt="Titulo">
@@ -23,14 +26,18 @@ export function footer() {
             <a class="icono1" href="#"><i class="fab fa-twitter"></i></a>
             <a class="icono1" href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-    </div>
-</footer>
-<div class="autores">
-    <div class="copyright">
-        &copy; 2024 Diana Morales - Karem Aranda
-    </div>
-</div>
-    `;
+    </div>`;
 
-    return footerElement;
+    autorsElement.innerHTML = 
+        `<div class="autores">
+            <div class="copyright">
+                &copy; 2024 Diana Morales - Karem Aranda
+            </div>
+        </div>`;
+
+    footerContainerElement.appendChild(footerElement);
+    footerContainerElement.appendChild(autorsElement);
+
+    // Devuelve el elemento de encabezado
+    return footerContainerElement;
 }

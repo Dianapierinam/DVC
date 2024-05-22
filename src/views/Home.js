@@ -25,7 +25,11 @@ export function renderCardElement(item, cardListElement) {
     chatButton.className = 'chatButton';
 
     chatButton.addEventListener('click', function() {
-        navigateTo("/chat");
+       const params = {
+            character_id: item.id,
+        }; 
+
+        navigateTo("/chat", params);
     });
 
     cardInfoElement.appendChild(cardNameElement);
@@ -69,10 +73,10 @@ export function Home(props) {
         navigateTo("/calculation");
     });
 
-    const groupBtn = HomeView.querySelector(".groupchat");
+    const groupBtn = HomeView.querySelector(".group-chat");
     if (groupBtn) {
         groupBtn.addEventListener('click', function() {
-            navigateTo("/groupChat");
+            navigateTo("/group-chat");
         });
     }
 
