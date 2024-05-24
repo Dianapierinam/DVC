@@ -1,11 +1,11 @@
 export function footer() {
-    // Crea el elemento de encabezado
-    const footerContainerElement = document.createElement('div');
-    const footerElement = document.createElement('footer');
-    const autorsElement = document.createElement('div');
+  // Crea el elemento de encabezado
+  const footerContainerElement = document.createElement('div');
+  const footerElement = document.createElement('footer');
+  const autorsElement = document.createElement('div');
 
-    // Agrega el contenido dinámico al encabezado
-    footerElement.innerHTML = `
+  // Agrega el contenido dinámico al encabezado
+  footerElement.innerHTML = `
     <div class="footer">
         <div class="pagina">
             <img class="footHarry" src="img/titulo.png" alt="Titulo">
@@ -28,16 +28,16 @@ export function footer() {
         </div>
     </div>`;
 
-    autorsElement.innerHTML = 
+  autorsElement.innerHTML = 
         `<div class="autores">
             <div class="copyright">
                 &copy; 2024 Diana Morales - Karem Aranda
             </div>
         </div>`;
 
-    footerContainerElement.appendChild(footerElement);
-    footerContainerElement.appendChild(autorsElement);
+  footerContainerElement.appendChild(footerElement);
+  footerContainerElement.appendChild(autorsElement);
 
-    // Devuelve el elemento de encabezado
-    return footerContainerElement;
+  // Devuelve el elemento de encabezado
+  return footerContainerElement;
 }

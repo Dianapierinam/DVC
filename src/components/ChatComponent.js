@@ -2,10 +2,10 @@ import { MessageComponent } from "./MessageComponent.js";
 import { communicateWithOpenAI } from "../lib/OpenAIApi.js"
 
 export function ChatComponent(character) {
-    const chatElement = document.createElement('div');
-    chatElement.classList.add("chat");
+  const chatElement = document.createElement('div');
+  chatElement.classList.add("chat");
 
-    chatElement.innerHTML = `
+  chatElement.innerHTML = `
         <button onclick="history.back()" class="btn-return">Regresar</button>
         <div class="chat-container">
             <div class="chat-character">
@@ -27,49 +27,55 @@ export function ChatComponent(character) {
         </div>
     `;
 
-    const list = chatElement.querySelector("#message-list");
-    const form = chatElement.querySelector('#message-form');
-    const textarea = chatElement.querySelector('#message-input');
+  const form = chatElement.querySelector('#message-form');
+  const textarea = chatElement.querySelector('#message-input');
+
+  textarea.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13 && !event.shiftKey) {
+      event.preventDefault(); // Evitar salto de línea en el textarea
+      form.dispatchEvent(new Event("submit"));
+    }
+  });
     
 
-    function onSubmit(formulario) {
-        formulario.preventDefault();
+  function onSubmit(formulario) {
+    formulario.preventDefault();
 
-        const userInput = formulario.target.userInput.value;
-        const characterName = character.name;
-        const characterDescription = character.description;
+    const userInput = formulario.target.userInput.value;
+    const characterName = character.name;
+    const characterDescription = character.description;
 
-        const list = chatElement.querySelector("#message-list");
+    const list = chatElement.querySelector("#message-list");
 
-        const messageElement = MessageComponent(userInput, "sent");
-        messageElement.innerHTML = userInput;
+    const messageElement = MessageComponent(userInput, "sent");
+    messageElement.innerHTML = userInput;
 
-        list.appendChild(messageElement);
+    list.appendChild(messageElement);
 
-        formulario.target.reset();
+    formulario.target.reset();
         
 
-        communicateWithOpenAI(characterName, characterDescription, userInput)
-            .then(res => res.json())
-            .then(res => {
-                const responseMessage = res.choices[0].message.content;
+    communicateWithOpenAI(characterName, characterDescription, userInput)
+      .then(res => res.json())
+      .then(res => {
+        const responseMessage = res.choices[0].message.content;
 
-                const responseMessageElement = MessageComponent(responseMessage, "received");
+        const responseMessageElement = MessageComponent(responseMessage, "received");
 
-                list.appendChild(responseMessageElement);
-            })
-             .catch((error) => {
+        list.appendChild(responseMessageElement);
+      })
+      .catch(() => {
         const errorAnswer = "Lo lamento, en este momento no puedo responder."
-        console.error("Error durante la solicitud de datos del usuario:", error);
-            })
+        console.log("Error durante la solicitud de datos del usuario:", errorAnswer);
+      })
             
     
-        return false;
-    };
+    return false;
+  }
 
-    form.addEventListener("submit", onSubmit)
+  form.addEventListener("submit", onSubmit)
 
-    return chatElement;
+  return chatElement;
 }
 
    

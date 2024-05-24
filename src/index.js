@@ -2,10 +2,9 @@ import { setRootEl, setRoutes, onURLChange } from './router.js';
 import HomeView from '../views/Home.js'; 
 import ChatView from './views/ChatView.js'; 
 import groupView from './views/GroupChatView.js'; 
-import ApiKey from './views/ApiKey.js';
+import ApiKey from './views/Apikey.js';
 import CalculationView from './views/CalculationView.js'; 
 import ErrorView from './views/Error.js';
-import data from '../data/dataset.js';
 
 
 // Obtener el elemento raíz

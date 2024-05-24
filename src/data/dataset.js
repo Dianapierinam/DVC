@@ -6,47 +6,47 @@ export default [ //todo esto es un arrey de objetos
     "description": "Harry Potter, nacido el 31 de julio de 1980, es conocido en el mundo mágico como el 'niño que vivió'. Fue famoso por sobrevivir al intento de asesinato de Lord Voldemort cuando era solo un bebé. Asistió a Hogwarts y fue seleccionado en Gryffindor. Harry es conocido por su valentía, lealtad y habilidad excepcional para la magia. Durante su tiempo en la escuela, fundó la Armada de Dumbledore para luchar contra las injusticias. Su coraje lo llevó a derrotar a Voldemort, poniendo fin a la Segunda Guerra de los Magos.",
     "imageUrl": "https://images5.fanpop.com/image/photos/25600000/Harry-Potter-Wallpaper-harry-potter-25653343-1024-768.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangreMestiza",
-        "yearOfBirth": "1980"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangreMestiza",
+      "yearOfBirth": "1980"
     },
   },
   {
     "id": "hermione_granger",
-        "name": "Hermione Granger",
-        "shortDescription": "Inteligente y valiente, una de las mejores amigas de Harry Potter.",
-        "description": "Hermione Granger, nacida el 19 de septiembre de 1979, es conocida por su inteligencia y valentía. Es una bruja nacida de padres muggles, pero demostró un talento excepcional en la magia desde una edad temprana. Fue seleccionada en Gryffindor junto a Harry y Ron. Su dedicación al estudio y su habilidad para resolver problemas fueron cruciales en la lucha contra Lord Voldemort. Hermione es una defensora de los derechos de los elfos domésticos y fundó la Sociedad de la Defensa de los Elfos Domésticos en Hogwarts.",
-        "imageUrl": "https://i.pinimg.com/originals/8f/9c/8d/8f9c8d8bfa9ca6b4628a5096835f8444.jpg",
-        "facts": {
-            "casaDeOrigen": "gryffindor",
-            "raza": "sangreSucia",
-            "yearOfBirth": "1979"
+    "name": "Hermione Granger",
+    "shortDescription": "Inteligente y valiente, una de las mejores amigas de Harry Potter.",
+    "description": "Hermione Granger, nacida el 19 de septiembre de 1979, es conocida por su inteligencia y valentía. Es una bruja nacida de padres muggles, pero demostró un talento excepcional en la magia desde una edad temprana. Fue seleccionada en Gryffindor junto a Harry y Ron. Su dedicación al estudio y su habilidad para resolver problemas fueron cruciales en la lucha contra Lord Voldemort. Hermione es una defensora de los derechos de los elfos domésticos y fundó la Sociedad de la Defensa de los Elfos Domésticos en Hogwarts.",
+    "imageUrl": "https://i.pinimg.com/originals/8f/9c/8d/8f9c8d8bfa9ca6b4628a5096835f8444.jpg",
+    "facts": {
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangreSucia",
+      "yearOfBirth": "1979"
     },
 
   },
   {
     "id": "ron_weasley",
-        "name": "Ron Weasley",
-        "shortDescription": "Leal y valiente, mejor amigo de Harry Potter y esposo de Hermione Granger.",
-        "description": "Ronald 'Ron' Weasley, nacido el 1 de marzo de 1980, es conocido por su lealtad y valentía. Es el sexto hijo de la familia Weasley y siempre ha vivido bajo la sombra de sus hermanos mayores. A pesar de esto, demostró ser un amigo leal y valiente, acompañando a Harry en sus aventuras desde el primer día en Hogwarts. Ron es conocido por su humor y su amor por la comida. Después de la Segunda Guerra de los Magos, se convirtió en Auror y más tarde en socio en la tienda de bromas Weasley's Wizard Wheezes.",
-        "imageUrl": "https://images4.fanpop.com/image/photos/24400000/Harry-Potter-Wallpaper-harry-potter-24478353-1024-768.jpg",
-        "facts": {
-            "casaDeOrigen": "gryffindor",
-            "raza": "sangrePura",
-            "yearOfBirth": "1980"
+    "name": "Ron Weasley",
+    "shortDescription": "Leal y valiente, mejor amigo de Harry Potter y esposo de Hermione Granger.",
+    "description": "Ronald 'Ron' Weasley, nacido el 1 de marzo de 1980, es conocido por su lealtad y valentía. Es el sexto hijo de la familia Weasley y siempre ha vivido bajo la sombra de sus hermanos mayores. A pesar de esto, demostró ser un amigo leal y valiente, acompañando a Harry en sus aventuras desde el primer día en Hogwarts. Ron es conocido por su humor y su amor por la comida. Después de la Segunda Guerra de los Magos, se convirtió en Auror y más tarde en socio en la tienda de bromas Weasley's Wizard Wheezes.",
+    "imageUrl": "https://images4.fanpop.com/image/photos/24400000/Harry-Potter-Wallpaper-harry-potter-24478353-1024-768.jpg",
+    "facts": {
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1980"
     },
     
   },
   {
     "id": "albus_dumbledore",
-        "name": "Albus Dumbledore",
-        "shortDescription": "El director de Hogwarts, uno de los magos más poderosos de su tiempo.",
-        "description": "Albus Percival Wulfric Brian Dumbledore fue uno de los magos más destacados de su época y director de Hogwarts durante muchos años. Nació en 1881 y fue conocido por su sabiduría, compasión y habilidad excepcional en la magia. Como fundador de la Orden del Fénix, lideró la resistencia contra Lord Voldemort durante la Primera y la Segunda Guerra de los Magos. Dumbledore poseía la Varita de Saúco y la Piedra de la Resurrección. Aunque tenía sus propios errores, su deseo de redimirse y proteger a los demás fue su legado más duradero.",
-        "imageUrl": "https://i.pinimg.com/originals/59/cc/f1/59ccf12fd60f51a21af221ab2f7729b1.jpg",
-        "facts": {
-            "casaDeOrigen": "gryffindor",
-            "raza": "sangreMestiza",
-            "yearOfBirth": "1881"
+    "name": "Albus Dumbledore",
+    "shortDescription": "El director de Hogwarts, uno de los magos más poderosos de su tiempo.",
+    "description": "Albus Percival Wulfric Brian Dumbledore fue uno de los magos más destacados de su época y director de Hogwarts durante muchos años. Nació en 1881 y fue conocido por su sabiduría, compasión y habilidad excepcional en la magia. Como fundador de la Orden del Fénix, lideró la resistencia contra Lord Voldemort durante la Primera y la Segunda Guerra de los Magos. Dumbledore poseía la Varita de Saúco y la Piedra de la Resurrección. Aunque tenía sus propios errores, su deseo de redimirse y proteger a los demás fue su legado más duradero.",
+    "imageUrl": "https://i.pinimg.com/originals/59/cc/f1/59ccf12fd60f51a21af221ab2f7729b1.jpg",
+    "facts": {
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangreMestiza",
+      "yearOfBirth": "1881"
     },
   },
   {
@@ -56,9 +56,9 @@ export default [ //todo esto es un arrey de objetos
     "description": "Severus Snape, nacido el 9 de enero de 1960, fue un personaje con una historia compleja y una lealtad ambigua. A pesar de sus acciones aparentemente malvadas, Snape jugó un papel crucial en la derrota de Lord Voldemort. Siendo un miembro de la Orden del Fénix, trabajó como espía dentro de las filas de los mortífagos. Su amor no correspondido por Lily Potter lo llevó a proteger a su hijo, Harry, a pesar de su antipatía hacia él. Snape demostró que la redención y el sacrificio pueden venir de lugares inesperados.",
     "imageUrl": "https://www.chelseamamma.co.uk/wp-content/uploads/2016/12/8a9ebc30fdb2217fc0532de8562c6a9f-1.jpg",
     "facts": {
-        "casaDeOrigen": "slytherin",
-        "raza": "sangreMestiza",
-        "yearOfBirth": "1960"
+      "casaDeOrigen": "slytherin",
+      "raza": "sangreMestiza",
+      "yearOfBirth": "1960"
     },
   },
   {
@@ -68,34 +68,34 @@ export default [ //todo esto es un arrey de objetos
     "description": "Remus John Lupin, nacido el 10 de marzo de 1960, fue un mago y licántropo. A pesar de su condición de hombre lobo, Lupin fue un estudiante y luego un profesor excepcional en Hogwarts. Demostró ser un amigo leal y valiente, especialmente durante la Segunda Guerra de los Magos. Lupin luchó por los derechos de los hombres lobo y se unió a la Orden del Fénix para luchar contra Lord Voldemort. Su amor por Nymphadora Tonks y su hijo, Teddy, lo inspiró a luchar por un mundo mejor.",
     "imageUrl": "https://media.harrypotterfanzone.com/remus-lupin-prisoner-of-azkaban-portrait-2.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangreMestiza",
-        "yearOfBirth": "1960"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangreMestiza",
+      "yearOfBirth": "1960"
     },
   
   },
   {
     "id": "lord_voldemort",
-        "name": "Lord Voldemort",
-        "shortDescription": "Uno de los magos más oscuros de todos los tiempos, cuyo verdadero nombre es Tom Riddle.",
-        "description": "Lord Voldemort, nacido como Tom Marvolo Riddle, es uno de los magos más oscuros de todos los tiempos. Surgió como una amenaza durante la Primera y Segunda Guerra de los Magos, siendo conocido por su ambición desmedida y su búsqueda de la inmortalidad. Riddle fue responsable de la muerte de los padres de Harry Potter y de una ola de terror en el mundo mágico. Su nombre se convirtió en sinónimo de miedo y sus seguidores eran temidos por su crueldad y fanatismo.",
-        "imageUrl": "https://i.pinimg.com/736x/9a/19/b7/9a19b77081487a97f3e91700c064763b.jpg",
-        "facts": {
-            "casaDeOrigen": "slytherin",
-            "raza": "sangreMestiza",
-            "yearOfBirth": "1926"
+    "name": "Lord Voldemort",
+    "shortDescription": "Uno de los magos más oscuros de todos los tiempos, cuyo verdadero nombre es Tom Riddle.",
+    "description": "Lord Voldemort, nacido como Tom Marvolo Riddle, es uno de los magos más oscuros de todos los tiempos. Surgió como una amenaza durante la Primera y Segunda Guerra de los Magos, siendo conocido por su ambición desmedida y su búsqueda de la inmortalidad. Riddle fue responsable de la muerte de los padres de Harry Potter y de una ola de terror en el mundo mágico. Su nombre se convirtió en sinónimo de miedo y sus seguidores eran temidos por su crueldad y fanatismo.",
+    "imageUrl": "https://i.pinimg.com/736x/9a/19/b7/9a19b77081487a97f3e91700c064763b.jpg",
+    "facts": {
+      "casaDeOrigen": "slytherin",
+      "raza": "sangreMestiza",
+      "yearOfBirth": "1926"
     },
   },
   {
     "id": "rubeus_hagrid",
-        "name": "Rubeus Hagrid",
-        "shortDescription": "Guardián de las Llaves y Terrenos de Hogwarts, amante de las criaturas mágicas.",
-        "description": "Rubeus Hagrid, conocido simplemente como Hagrid, es un semi-gigante con un corazón de oro. Trabajó como Guardián de las Llaves y Terrenos de Hogwarts, presentando a Harry Potter al mundo mágico. A pesar de su apariencia intimidante, Hagrid es gentil y cariñoso, especialmente con las criaturas mágicas, que adora. A lo largo de los años, su lealtad hacia Dumbledore y los amigos de Harry lo llevó a enfrentarse a grandes peligros para protegerlos. Hagrid es una figura paterna para muchos y un símbolo de bondad y coraje.",
-        "imageUrl": "https://wl-adme.cf.tsp.li/resize/728x/jpg/88a/250/7dcafe567bae6dd46e2c16560c.jpg",
-        "facts": {
-            "casaDeOrigen": "gryffindor",
-            "raza": "semiGigante",
-            "yearOfBirth": "1928"
+    "name": "Rubeus Hagrid",
+    "shortDescription": "Guardián de las Llaves y Terrenos de Hogwarts, amante de las criaturas mágicas.",
+    "description": "Rubeus Hagrid, conocido simplemente como Hagrid, es un semi-gigante con un corazón de oro. Trabajó como Guardián de las Llaves y Terrenos de Hogwarts, presentando a Harry Potter al mundo mágico. A pesar de su apariencia intimidante, Hagrid es gentil y cariñoso, especialmente con las criaturas mágicas, que adora. A lo largo de los años, su lealtad hacia Dumbledore y los amigos de Harry lo llevó a enfrentarse a grandes peligros para protegerlos. Hagrid es una figura paterna para muchos y un símbolo de bondad y coraje.",
+    "imageUrl": "https://wl-adme.cf.tsp.li/resize/728x/jpg/88a/250/7dcafe567bae6dd46e2c16560c.jpg",
+    "facts": {
+      "casaDeOrigen": "gryffindor",
+      "raza": "semiGigante",
+      "yearOfBirth": "1928"
     },
   },
   {
@@ -105,9 +105,9 @@ export default [ //todo esto es un arrey de objetos
     "description": "Sirius Black, nacido en 1959, fue el padrino de Harry Potter y un fiel amigo de sus padres. Fue injustamente encarcelado en Azkaban por el asesinato de doce muggles y traición a James y Lily Potter. Como un animago, podía transformarse en un perro negro. Después de escapar de Azkaban, luchó contra Lord Voldemort y su lealtad hacia la Orden del Fénix nunca vaciló. A pesar de su trágico destino, Sirius fue recordado como un hombre valiente que sacrificó su libertad por la causa del bien.",
     "imageUrl": "https://media.harrypotterfanzone.com/sirius-black-order-of-the-phoenix-portrait-3.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangrePura",
-        "yearOfBirth": "1959"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1959"
     },
   },
   {
@@ -117,9 +117,9 @@ export default [ //todo esto es un arrey de objetos
     "description": "Ginevra 'Ginny' Molly Weasley es conocida por su valentía y talento en el campo de quidditch. Nacida el 11 de agosto de 1981, Ginny es la única hija de la familia Weasley y la más joven de los siete hermanos. A lo largo de su tiempo en Hogwarts, demostró ser una bruja poderosa y decidida. Fue seleccionada en Gryffindor y se convirtió en la buscadora del equipo de quidditch de la casa. Su valentía se demostró en la Batalla de Hogwarts, donde luchó contra los mortífagos.",
     "imageUrl": "https://images6.fanpop.com/image/photos/34100000/Ginny-Weasley-Wallpaper-harry-potter-34185846-1280-800.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangrePura",
-        "yearOfBirth": "1981"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1981"
     },
   },
   {
@@ -129,9 +129,9 @@ export default [ //todo esto es un arrey de objetos
     "description": "Luna Lovegood, nacida el 13 de febrero de 1981, es conocida por su singularidad y creencia en lo extraordinario. Luna es una bruja inusual con un espíritu libre y una mente abierta. Fue seleccionada en Ravenclaw por su inteligencia y originalidad. A pesar de ser marginada por otros estudiantes debido a sus creencias peculiares, Luna nunca perdió su optimismo ni su valentía. Se unió a la Armada de Dumbledore y luchó valientemente en la Batalla de Hogwarts. Después de la guerra, se convirtió en una destacada naturalista mágica.",
     "imageUrl": "https://wallpapercave.com/wp/wp1921651.jpg",
     "facts": {
-        "casaDeOrigen": "ravenclaw",
-        "raza": "sangrePura",
-        "yearOfBirth": "1981"
+      "casaDeOrigen": "ravenclaw",
+      "raza": "sangrePura",
+      "yearOfBirth": "1981"
     },
   },
   {
@@ -141,21 +141,21 @@ export default [ //todo esto es un arrey de objetos
     "description": "Neville Longbottom es un estudiante de Gryffindor en el Colegio Hogwarts de Magia y Hechicería. Aunque inicialmente se le consideraba torpe y despistado, Neville demostró ser valiente y determinado, especialmente durante la Segunda Guerra Mágica. Se destacó por su papel en la Batalla de Hogwarts, donde lideró a sus compañeros de casa contra los seguidores de Lord Voldemort. Después de la guerra, se convirtió en profesor en Hogwarts, enseñando Herbología. Al regresar a Hogwarts, Neville se encontró con un ambiente diferente al que recordaba, pero también había un sentido de renovación y esperanza.",
     "imageUrl": "https://wallpapercave.com/wp/wp4567115.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangrePura",
-        "yearOfBirth": "1980"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1980"
     },
   },
   {
     "id": "fred_weasley",
-        "name": "Fred Weasley",
-        "shortDescription": "Travieso bromista",
-        "description": "Fred Weasley, junto con su hermano gemelo George, son conocidos por sus travesuras y su ingenio en Hogwarts. Ambos cofundaron, una tienda de bromas y travesuras en el Callejón Diagon. Durante la Segunda Guerra Mágica, Fred luchó valientemente junto a su familia y amigos en la Batalla de Hogwarts, donde lamentablemente perdió la vida,. La pérdida de Fred dejó un vacío palpable en la comunidad pero Su espíritu juguetón y su amor por la diversión lo convirtieron en un querido miembro de la comunidad mágica.",
-        "imageUrl": "https://images.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/29898/1503525439-20754-6187/FRE_large.jpg",
-        "facts": {
-            "casaDeOrigen": "gryffindor",
-            "raza": "sangrePura",
-            "yearOfBirth": "1978"
+    "name": "Fred Weasley",
+    "shortDescription": "Travieso bromista",
+    "description": "Fred Weasley, junto con su hermano gemelo George, son conocidos por sus travesuras y su ingenio en Hogwarts. Ambos cofundaron, una tienda de bromas y travesuras en el Callejón Diagon. Durante la Segunda Guerra Mágica, Fred luchó valientemente junto a su familia y amigos en la Batalla de Hogwarts, donde lamentablemente perdió la vida,. La pérdida de Fred dejó un vacío palpable en la comunidad pero Su espíritu juguetón y su amor por la diversión lo convirtieron en un querido miembro de la comunidad mágica.",
+    "imageUrl": "https://images.hobbydb.com/processed_uploads/subject_photo/subject_photo/image/29898/1503525439-20754-6187/FRE_large.jpg",
+    "facts": {
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1978"
     },
   },
   {
@@ -165,9 +165,9 @@ export default [ //todo esto es un arrey de objetos
     "description": "George Weasley, gemelo idéntico de Fred Weasley, compartió con su hermano una pasión por las bromas y travesuras en Hogwarts. Juntos fundaron Gemelos Weasley, una tienda exitosa en el Callejón Diagon. La Segunda Guerra Mágica dejó una marca indeleble en George, especialmente tras la pérdida de su hermano Fred en la Batalla de Hogwarts. A pesar de la tragedia, continuó con el negocio familiar y, con el tiempo, encontró la manera de volver a sonreír. Aunque la pérdida de su hermano siempre lo acompañaría, George demostró que el amor y la camaradería pueden superar incluso los momentos más oscuros.",
     "imageUrl": "https://i.pinimg.com/1200x/18/73/e5/1873e585e1772c3353deb903a845f62e.jpg",
     "facts": {
-        "casaDeOrigen": "gryffindor",
-        "raza": "sangrePura",
-        "yearOfBirth": "1978"
+      "casaDeOrigen": "gryffindor",
+      "raza": "sangrePura",
+      "yearOfBirth": "1978"
     },
   },
   {
@@ -177,21 +177,21 @@ export default [ //todo esto es un arrey de objetos
     "description": "Draco Malfoy, un estudiante de Slytherin en Hogwarts, es conocido por ser el rival de Harry Potter. Proviene de una familia de sangre pura y fue criado con creencias de sangre purista. Aunque inicialmente fue un antagonista en la vida de Harry, Draco enfrentó conflictos internos y presiones familiares durante la Segunda Guerra Mágica. Después de la guerra, se alejó de las creencias de su familia y encontró su propio camino en el mundo mágico. Esta evolución muestra una profundidad en su personaje.",
     "imageUrl": "https://images5.fanpop.com/image/photos/25500000/Draco-Malfoy-Wallpaper-draco-malfoy-25527029-1024-768.jpg",
     "facts": {
-        "casaDeOrigen": "slytherin",
-        "raza": "sangrePura",
-        "yearOfBirth": "1980"
+      "casaDeOrigen": "slytherin",
+      "raza": "sangrePura",
+      "yearOfBirth": "1980"
     },
   },
   {
     "id": "bellatrix_lestrange",
-        "name": "Bellatrix Lestrange",
-        "shortDescription": "Devota seguidora de Voldemort",
-        "description": "Bellatrix Lestrange, miembro de la familia Black y devota seguidora de Lord Voldemort, es conocida por su crueldad y lealtad fanática hacia el Señor Tenebroso. Participó en numerosos actos de violencia durante la Primera y Segunda Guerra Mágica, incluyendo la tortura de Neville Longbottom y la muerte de su prima Sirius Black. Bellatrix era temida por su habilidad en las Artes Oscuras y su devoción ciega a Voldemort, lo que la convirtió en una de las brujas más peligrosas de su tiempo.",
-        "imageUrl": "https://i.pinimg.com/originals/57/a1/9b/57a19b9c54e6376da104bcca8ca9bc53.jpg",
-        "facts": {
-            "casaDeOrigen": "slytherin",
-            "raza": "sangrePura",
-            "yearOfBirth": "1951"
+    "name": "Bellatrix Lestrange",
+    "shortDescription": "Devota seguidora de Voldemort",
+    "description": "Bellatrix Lestrange, miembro de la familia Black y devota seguidora de Lord Voldemort, es conocida por su crueldad y lealtad fanática hacia el Señor Tenebroso. Participó en numerosos actos de violencia durante la Primera y Segunda Guerra Mágica, incluyendo la tortura de Neville Longbottom y la muerte de su prima Sirius Black. Bellatrix era temida por su habilidad en las Artes Oscuras y su devoción ciega a Voldemort, lo que la convirtió en una de las brujas más peligrosas de su tiempo.",
+    "imageUrl": "https://i.pinimg.com/originals/57/a1/9b/57a19b9c54e6376da104bcca8ca9bc53.jpg",
+    "facts": {
+      "casaDeOrigen": "slytherin",
+      "raza": "sangrePura",
+      "yearOfBirth": "1951"
     },
   },
   {
@@ -221,14 +221,14 @@ export default [ //todo esto es un arrey de objetos
   },
   {
     "id": "dobby",
-      "name": "Dobby",
-      "shortDescription": "El elfo doméstico leal a Harry Potter",
-      "description": "Dobby es un elfo doméstico excepcional, conocido por su lealtad inquebrantable a Harry Potter y su valentía para desafiar las convenciones de su propia especie. Después de ser liberado por Harry, Dobby sirve a menudo como un consejero y protector del joven mago, sacrificando su propia seguridad para salvar a sus amigos. Su devoción y sacrificio lo convierten en un ejemplo de coraje y bondad en un mundo lleno de adversidad y prejuicios. El legado de Dobby perdura más allá de su trágica muerte, recordándonos la importancia de la empatía, la valentía y la lucha por la libertad.",
-      "imageUrl": "https://blogstudio.s3.amazonaws.com/retrostyler/81862ff850bbc06df3e7cd622083f52f.jpg",
-      "facts": {
-        "casaDeOrigen": "noTienenCasa",
-        "raza": "sangreDeElfo",
-        "yearOfBirth": "1978"
+    "name": "Dobby",
+    "shortDescription": "El elfo doméstico leal a Harry Potter",
+    "description": "Dobby es un elfo doméstico excepcional, conocido por su lealtad inquebrantable a Harry Potter y su valentía para desafiar las convenciones de su propia especie. Después de ser liberado por Harry, Dobby sirve a menudo como un consejero y protector del joven mago, sacrificando su propia seguridad para salvar a sus amigos. Su devoción y sacrificio lo convierten en un ejemplo de coraje y bondad en un mundo lleno de adversidad y prejuicios. El legado de Dobby perdura más allá de su trágica muerte, recordándonos la importancia de la empatía, la valentía y la lucha por la libertad.",
+    "imageUrl": "https://blogstudio.s3.amazonaws.com/retrostyler/81862ff850bbc06df3e7cd622083f52f.jpg",
+    "facts": {
+      "casaDeOrigen": "noTienenCasa",
+      "raza": "sangreDeElfo",
+      "yearOfBirth": "1978"
     },
   },
   {

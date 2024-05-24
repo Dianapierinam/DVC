@@ -30,13 +30,13 @@ export function groupchat(characters) {
   const form = groupElement.querySelector("#message-form-group");
   const messageInput = groupElement.querySelector("#message-input-group");
 
-// Evento para dar enter en el input y enviar mensaje
-messageInput.addEventListener("keydown", function(event) {
+  // Evento para dar enter en el input y enviar mensaje
+  messageInput.addEventListener("keydown", function(event) {
     if (event.keyCode === 13 && !event.shiftKey) {
-        event.preventDefault(); // Evitar salto de línea en el textarea
-        form.dispatchEvent(new Event("submit"));
+      event.preventDefault(); // Evitar salto de línea en el textarea
+      form.dispatchEvent(new Event("submit"));
     }
-});
+  });
 
 
   // Maneja el envío de mensajes
@@ -54,15 +54,15 @@ messageInput.addEventListener("keydown", function(event) {
       // Obtener respuestas automáticas de todos los personajes
       for (const character of characters) {
         try {
-          const response = await communicateWithOpenAI(character.name, character.description, messageText)
-          .then(res => res.json())
-          .then(res => {
-          const responseMessage = res.choices[0].message.content;
+          communicateWithOpenAI(character.name, character.description, messageText)
+            .then(res => res.json())
+            .then(res => {
+              const responseMessage = res.choices[0].message.content;
           
-          const characterMessage = MessageComponent(responseMessage, "received", character);
-          list.appendChild(characterMessage);
+              const characterMessage = MessageComponent(responseMessage, "received", character);
+              list.appendChild(characterMessage);
 
-        })
+            })
 
         } catch (error) {
           console.error("Error en la comunicación con OpenAI:", error);

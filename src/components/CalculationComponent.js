@@ -1,11 +1,12 @@
 import { computeStats } from "../lib/DataFunctions.js";
+//import { header } from "./header.js";
 import data from '../data/dataset.js';
 
 export function CalculationComponent() {
-    const calculationElement = document.createElement('div');
-    const year = computeStats(data);
+  const calculationElement = document.createElement('div');
+  const year = computeStats(data);
 
-    calculationElement.innerHTML = `
+  calculationElement.innerHTML = `
         <div id="mostrar-grafica">
             <div id="mostrar-mensaje">
                 <h3>No se han encontrado resultados</h3>
@@ -26,5 +27,5 @@ export function CalculationComponent() {
         <div id="varita"></div>
     `;
 
-    return calculationElement;
+  return calculationElement;
 }

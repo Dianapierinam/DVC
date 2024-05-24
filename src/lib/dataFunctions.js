@@ -4,7 +4,7 @@ export const filterData = (data, filterBy, value) => {
   
 export const sortData = (data, sortBy, sortOrder) => {
   
-  if (sortOrder == "") {
+  if (sortOrder === "") {
     return data;
   }
 

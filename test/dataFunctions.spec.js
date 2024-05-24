@@ -1,4 +1,4 @@
-import { filterData, sortData, computeStats } from '../src/lib/dataFunctions.js';
+import { filterData, sortData, computeStats } from '../src/lib/DataFunctions.js';
 import data from './data.js';
 
 describe('filterData', () => {

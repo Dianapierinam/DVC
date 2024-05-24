@@ -4,7 +4,6 @@
     border-radius: 10px;
     max-width: 800px;
     margin: 0 auto;
-    height: 550px;
     max-height: 800px;
     box-shadow: 0 -2px 5px rgba(219, 160, 8, 0.8);
 
@@ -19,9 +18,6 @@ h2 {
 #group-image-chat {
     display: flex;
     justify-content: flex-start;
-    position: fixed;
-    top: 60px; 
-    left: 348px; 
     background-color: rgba(219, 160, 8, 0.8);
     padding: 9px;
     border-radius: 10px 10px 0 0 ; 
@@ -52,12 +48,11 @@ h2 {
 }
 
 #message-input-group {
-    flex: 1;
+    margin-top: 100px;
     resize: none; /* No cambia el tamaño del textarea */
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 15px;
-    position: fixed;
     width: 42%;
     padding: 30px;
     box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -89,10 +84,11 @@ h2 {
 #send-group {
     height: 50px;
     width: 50px;
+    position: absolute;
     background-color: transparent;
     cursor: pointer;
     margin-top: 270px;
-    margin-left: 750px;
+
     
 }
 
@@ -146,55 +142,68 @@ h2 {
     width: 15%;
 }
 
-
-
 @media screen and (max-width: 768px) {
 
-.background-chat {
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-    height: 650px;
-    width: 80%;
+    .background-chat {
+        background-color: rgba(255, 255, 255, 0.8); 
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 0 auto;
+        height: 650px;
+        width: 80%;
     }
-#message-input-group {
-    flex: 1;
-    resize: none; /* Evita que el usuario cambie el tamaño del textarea */
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    position: fixed;
-    width: 42%;
-    padding: 30px;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    bottom: 180px; /* Ajusta este valor para colocar el textarea más abajo */
-    left: 50px; /* Ajusta el valor para posicionar el textarea dentro del contenedor */
-}
 
-.btn-send-container-group {
-    display: flex;
-    align-items: flex-end;
-}
+    #group-image {
+        height: 90%;
+        margin: auto;
+        padding: 0px 15px;
+    }
 
-.btn-send-group {
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    #group-image-chat {
+        display: flex;
+        justify-content: flex-start;
+        background-color: rgba(219, 160, 8, 0.8);
+        padding: 9px;
+        border-radius: 10px 10px 0 0;
+        }
 
-#send-group {
-    height: 50px;
-    width: 50px;
-    background-color: transparent;
-    cursor: pointer;
-    margin-top: 350px;
-    margin-left: 250px;
-}
+    #message-input-group {
+        flex: 1;
+        resize: none; 
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        position: fixed;
+        width: 42%;
+        padding: 30px;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        bottom: 180px; 
+        left: 50px; 
+    }
+
+    .btn-send-container-group {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .btn-send-group {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #send-group {
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        cursor: pointer;
+        margin-top: 350px;
+        margin-left: 250px;
+    }
 
 }
