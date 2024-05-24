@@ -1,13 +1,13 @@
 import { filterData, sortData } from "../lib/DataFunctions.js";
-import { renderCardList } from "../views/Home.js";
+import { renderCardList } from "../lib/common.js";
 import data from '../data/dataset.js';
 
 export function header() {
-    // Crea el elemento de encabezado
-    const headerElement = document.createElement('header');
+  // Crea el elemento de encabezado
+  const headerElement = document.createElement('header');
 
-    // Agrega el contenido dinámico al encabezado
-    headerElement.innerHTML = `
+  // Agrega el contenido dinámico al encabezado
+  headerElement.innerHTML = `
         <div class="titulo">
             <img src="img/titulo.png" alt="Titulo">
         </div>
@@ -63,40 +63,40 @@ export function header() {
         </nav>
     `;
 
-    const filterChange = () => {
-        let datosFiltrados = data;
+  const filterChange = () => {
+    let datosFiltrados = data;
 
-        if (elFilterCasa.value) {
-            datosFiltrados = filterData(datosFiltrados,"casaDeOrigen", elFilterCasa.value);
-        }
+    if (elFilterCasa.value) {
+      datosFiltrados = filterData(datosFiltrados,"casaDeOrigen", elFilterCasa.value);
+    }
 
-        if (elFilterRaza.value) {
-            datosFiltrados = filterData(datosFiltrados ,"raza", elFilterRaza.value);
-        }
+    if (elFilterRaza.value) {
+      datosFiltrados = filterData(datosFiltrados ,"raza", elFilterRaza.value);
+    }
 
-        datosFiltrados = sortData(datosFiltrados, "name", elOrder.value);
+    datosFiltrados = sortData(datosFiltrados, "name", elOrder.value);
 
-        renderCardList(datosFiltrados);
-    };
+    renderCardList(datosFiltrados);
+  };
 
-    const elFilterCasa = headerElement.querySelector("#filtrarCasa");
-    const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
-    const elOrder = headerElement.querySelector("#order");
-    const filterButton = headerElement.querySelector('#filterButton'); 
+  const elFilterCasa = headerElement.querySelector("#filtrarCasa");
+  const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
+  const elOrder = headerElement.querySelector("#order");
+  const filterButton = headerElement.querySelector('#filterButton'); 
 
-    elFilterCasa.addEventListener("change", filterChange);
-    elFilterRaza.addEventListener("change", filterChange);
-    elOrder.addEventListener("change", filterChange);
+  elFilterCasa.addEventListener("change", filterChange);
+  elFilterRaza.addEventListener("change", filterChange);
+  elOrder.addEventListener("change", filterChange);
 
-    filterButton.addEventListener("click", borrarFiltros);
-    function borrarFiltros() {
-        elFilterCasa.value = ""; 
-        elFilterRaza.value = ""; 
-        elOrder.value = "";
-        filterChange(); 
-}
+  filterButton.addEventListener("click", borrarFiltros);
+  function borrarFiltros() {
+    elFilterCasa.value = ""; 
+    elFilterRaza.value = ""; 
+    elOrder.value = "";
+    filterChange(); 
+  }
 
-    return headerElement;
+  return headerElement;
 }
 
 

@@ -22,7 +22,7 @@ const queryStringToObject = (queryString) => {
 };
 
 const renderView = (pathname = "/", props = {}) => {
-  console.log('*****', props);
+  // console.log('*****', props);
   rootEl.innerHTML = '';
   rootEl.appendChild(ROUTES[pathname](props));
 };
@@ -45,6 +45,43 @@ export const onURLChange = (location) => {
   }
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

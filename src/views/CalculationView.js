@@ -1,6 +1,6 @@
 import { CalculationComponent } from "../components/CalculationComponent.js";
 
-export function CalculationView(props) {
+export function CalculationView() {
   const calculationViewElement = document.createElement('div');
   const calculationComponentElement = CalculationComponent();
 

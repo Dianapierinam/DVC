@@ -1,5 +1,5 @@
-import { filterData, sortData, computeStats } from '../src/lib/dataFunctions.js';
-import data from './data.js';
+import { filterData, sortData, computeStats } from '../src/lib/DataFunctions.js';
+
 
 describe('filterData', () => {
   it('filtrar data por elementos', () => {
@@ -7,7 +7,7 @@ describe('filterData', () => {
     const testData = [
       { name: 'Harry Potter', facts: { casaDeOrigen: 'gryffindor' } },
       { name: 'Luna Lovegood', facts: { casaDeOrigen: 'ravenclaw' } },
-      { name: 'Severus Snape', facts: { casaDeOrigen: 'slytherin' } }
+      { name: 'Severus Snape', facts: { casaDeOrigen: 'slytherin' } },
     ];
 
     // Llamar a la función filterData con los datos de prueba
@@ -49,7 +49,17 @@ describe('sortData', () => {
     ]);
   });
 });
+it('devuelve datos sin ordenar cuando sortOrder es una cadena vacía', () => {
+  const testData = [
+    { name: 'Luna Lovegood' },
+    { name: 'Harry Potter' },
+    { name: 'Severus Snape' }
+  ];
 
+  const sortedData = sortData(testData, 'name', '');
+
+  expect(sortedData).toEqual(testData);
+});
 
 describe('computeStats', () => {
   it('calculates the average year of birth from the provided data', () => {
@@ -66,5 +76,16 @@ describe('computeStats', () => {
     // Verificar si el cálculo del año promedio es correcto
     expect(averageYear).toBe(1990); // El resultado esperado se redondea a 1990
   });
-  return data;
+  it('maneja datos sin años de nacimiento válidos', () => {
+    const testData = [
+      { name: 'Harry Potter', facts: { yearOfBirth: 'invalid' } },
+      { name: 'Luna Lovegood', facts: { yearOfBirth: null } },
+      { name: 'Severus Snape', facts: { yearOfBirth: undefined } }
+    ];
+
+    const averageYear = computeStats(testData);
+
+    expect(averageYear).toBe(0); 
+  }); 
+
 });

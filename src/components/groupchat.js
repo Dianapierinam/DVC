@@ -30,32 +30,42 @@ export function groupchat(characters) {
   const form = groupElement.querySelector("#message-form-group");
   const messageInput = groupElement.querySelector("#message-input-group");
 
-// Evento para dar enter en el input y enviar mensaje
-messageInput.addEventListener("keydown", function(event) {
+  // Evento para dar enter en el input y enviar mensaje
+  messageInput.addEventListener("keydown", function(event) {
     if (event.keyCode === 13 && !event.shiftKey) {
-        event.preventDefault(); // Evitar salto de línea en el textarea
-        form.dispatchEvent(new Event("submit"));
+      event.preventDefault(); // Evitar salto de línea en el textarea
+      form.dispatchEvent(new Event("submit"));
     }
-});
+  });
 
 
   // Maneja el envío de mensajes
   form.addEventListener("submit", async function(event) {
     event.preventDefault();
     const messageText = messageInput.value.trim();
+
     if (messageText !== "") {
       const newMessage = MessageComponent(messageText, "sent");
       list.appendChild(newMessage);
       messageInput.value = "";
 
+      
+
       // Obtener respuestas automáticas de todos los personajes
       for (const character of characters) {
         try {
-          const response = await communicateWithOpenAI(character.name, character.description, messageText);
-          const characterMessage = MessageComponent(response, "received", character);
-          list.appendChild(characterMessage);
+          await communicateWithOpenAI(character.name, character.description, messageText)
+            .then(res => res.json())
+            .then(res => {
+              const responseMessage = res.choices[0].message.content;
+          
+              const characterMessage = MessageComponent(responseMessage, "received", character);
+              list.appendChild(characterMessage);
+
+            })
+
         } catch (error) {
-          console.error("Error en la comunicación con OpenAI:", error);
+        //   console.error("Error en la comunicación con OpenAI:", error);
         }
       }
     }
@@ -63,6 +73,19 @@ messageInput.addEventListener("keydown", function(event) {
 
   return groupElement;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
