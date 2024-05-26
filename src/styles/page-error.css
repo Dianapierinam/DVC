@@ -1,0 +1,16 @@
+.titleError {
+  font-size: 24px;
+  color: red;
+  text-align: center;
+}
+
+.harrypotter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.imgdog {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,12 +1,14 @@
 import { MessageComponent } from "./MessageComponent.js";
-import { communicateWithOpenAI } from "../lib/OpenAIApi.js"
+import { communicateWithOpenAI } from "../lib/openAIApi.js";
+import { navigateTo } from "../router.js";
 
 export function ChatComponent(character) {
-  const chatElement = document.createElement('div');
+  const chatElement = document.createElement("div");
   chatElement.classList.add("chat");
 
   chatElement.innerHTML = `
         <button onclick="history.back()" class="btn-return">Regresar</button>
+        <button onclick="goToApiKey()" class="btn-returnApikey">Introduce la llave mágica</button>
         <div class="chat-container">
             <div class="chat-character">
                 <img class="character-picture" src="${character.imageUrl}" alt=""/>
@@ -27,16 +29,19 @@ export function ChatComponent(character) {
         </div>
     `;
 
-  const form = chatElement.querySelector('#message-form');
-  const textarea = chatElement.querySelector('#message-input');
+  window.goToApiKey = function () {
+    navigateTo("/api-key");
+  };
 
-  textarea.addEventListener("keydown", function(event) {
+  const form = chatElement.querySelector("#message-form");
+  const textarea = chatElement.querySelector("#message-input");
+
+  textarea.addEventListener("keydown", function (event) {
     if (event.keyCode === 13 && !event.shiftKey) {
       event.preventDefault(); // Evitar salto de línea en el textarea
       form.dispatchEvent(new Event("submit"));
     }
   });
-    
 
   function onSubmit(formulario) {
     formulario.preventDefault();
@@ -53,29 +58,35 @@ export function ChatComponent(character) {
     list.appendChild(messageElement);
 
     formulario.target.reset();
-        
 
     communicateWithOpenAI(characterName, characterDescription, userInput)
-      .then(res => res.json())
-      .then(res => {
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.error) {
+          throw new Error(
+            "Lo lamento, necesitas ingresar la llave para poder hablar conmigo"
+          );
+        }
         const responseMessage = res.choices[0].message.content;
 
-        const responseMessageElement = MessageComponent(responseMessage, "received");
+        const responseMessageElement = MessageComponent(
+          responseMessage,
+          "received"
+        );
 
         list.appendChild(responseMessageElement);
       })
-      .catch(() => {
-        const errorAnswer = "Lo lamento, en este momento no puedo responder."
-        console.log("Error durante la solicitud de datos del usuario:", errorAnswer);
-      })
-            
-    
+      .catch((err) => {
+        const errorMessage = err.message;
+
+        const errorMessageElement = MessageComponent(errorMessage, "received");
+        list.appendChild(errorMessageElement);
+      });
+
     return false;
   }
 
-  form.addEventListener("submit", onSubmit)
+  form.addEventListener("submit", onSubmit);
 
   return chatElement;
 }
-
-   

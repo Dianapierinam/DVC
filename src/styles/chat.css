@@ -1,148 +1,162 @@
 .chat-container {
-    width: 1000px;
-    height: 800px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    border-radius: 50px;
-    margin: auto;
-    margin-top: 50px; 
-    
+  width: 1000px;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .chat-container .chat-character .character-picture {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-.returnChat{
-    border-radius: 10px;
-    padding: 10px 20px; 
-    font-size: 16px;
-    cursor: pointer; 
+.returnChat {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
+
+.btn-returnApikey {
+  background-color: #383c37;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  top: 200px;
+  margin-right: 200px;
+  font-family: Roboto Condensed;
+  cursor: pointer;
+}
+
 #person-consult {
-    width: 80%;
-    height: 100px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-top: 45%;
-    margin-left: 20px;
-    resize: none; /* Evita que el usuario pueda redimensionar el textarea */
-    background-color: #FFBD59;
+  width: 80%;
+  height: 100px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 45%;
+  margin-left: 20px;
+  resize: none; /* Evita que el usuario pueda redimensionar el textarea */
+  background-color: #ffbd59;
 }
-#sendButton{
-    border-radius: 10px;
-    padding: 10px 20px; 
-    font-size: 16px;
-    cursor: pointer; 
+#sendButton {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
-
 
 .sendMessage {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .chat-character {
-    padding: 10px;
-    display: flex;
-    align-items: center;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 #chat-input {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .btn-send {
-    background-color: transparent;
-    padding: 0px;
+  background-color: transparent;
+  padding: 0px;
 }
 
 .btn-send img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .message-input {
-    position: relative;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
+  .chat {
+    height: 100vh;
+    width: 100vw;
+    margin-top: 115px;
+    overflow-y: auto;
+  }
 
-    .chat {
-        height: 100vh;
-        width: 100vw;
-        margin-top: 115px;
-        overflow-y: auto;
-    }
+  .chat .btn-return {
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
 
-    .chat .btn-return {
-        margin-bottom: 10px;
-        margin-left: 25px;    
-    }
+  .chat .btn-returnApikey {
+    position: fixed;
+    margin-bottom: 0;
+    margin-top: -150px;
+  }
 
-    .chat-container {
-        width: 80%;
-        height: 90%;
-        margin: auto;
-        padding: 0px 15px;
-    }
+  .chat-container {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    padding: 0px 15px;
+  }
 
-    .chat .chat-character .character-picture {
-        width: 100px;
-        height: 100px;
-    }
+  .chat .chat-character .character-picture {
+    width: 100px;
+    height: 100px;
+  }
 
-    .chat .chat-character .character-name {
-        margin-left: 30px;
-    }
+  .chat .chat-character .character-name {
+    margin-left: 30px;
+  }
 
-    .chat .chat-message-list {
-        display: flex;
-        flex-direction: column;
-        max-height: 470px;
-        margin-top: 10px;
-        padding: 20px;
-        height: 430px;
-        overflow-y: auto;
-    }
+  .chat .chat-message-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 470px;
+    margin-top: 10px;
+    padding: 20px;
+    height: 430px;
+    overflow-y: auto;
+  }
 
-    .chat .chat-message-list .message {
-       margin-bottom: 10px;
-       padding: 10px;
-       color: white;
-       width: 70%;
-       
-    }
+  .chat .chat-message-list .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    width: 70%;
+  }
 
-    .chat .chat-message-list .message.received {
-        background-color: #4c4c4c;
-      
-    }
+  .chat .chat-message-list .message.received {
+    background-color: #4c4c4c;
+  }
 
-    .chat .chat-message-list .message.sent {
-        background-color: #DBA008;
-        align-self: end;
-    }
+  .chat .chat-message-list .message.sent {
+    background-color: #dba008;
+    align-self: end;
+  }
 
-    .chat .chat-input .chat-message-form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  .chat .chat-input .chat-message-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .chat .chat-input textarea {
-        width: 85%;
-    }
+  .chat .chat-input textarea {
+    width: 85%;
+  }
 
-    .chat .chat-input .btn-send-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 15%;
-    }
+  .chat .chat-input .btn-send-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+  }
 
-    #chatfondo{
-        width: 400px;
-        height: 600px;
-        margin: auto;
-    }
+  #chatfondo {
+    width: 400px;
+    height: 600px;
+    margin: auto;
+  }
 }

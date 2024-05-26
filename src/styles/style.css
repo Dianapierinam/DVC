@@ -1,50 +1,48 @@
-@import url('header.css');
-@import url('footer.css');
-@import url('card.css');
-@import url('chat.css');
-@import url('gropChat.css');
-@import url('masInfo.css');
-@import url('navigation.css');
-@import url('calculation.css');
-@import url('api-key.css');
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
+@import url("header.css");
+@import url("footer.css");
+@import url("card.css");
+@import url("chat.css");
+@import url("gropChat.css");
+@import url("masInfo.css");
+@import url("navigation.css");
+@import url("calculation.css");
+@import url("api-key.css");
+@import url("page-error.css");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
 
 @font-face {
-   font-family: 'londrina';
-   src: url('../fonts/LondrinaSolid-Regular.ttf') format('truetype');
+  font-family: "londrina";
+  src: url("../fonts/LondrinaSolid-Regular.ttf") format("truetype");
 }
-
 
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url("../img/fondo_de_harry_potter.jpg"); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/fondo_de_harry_potter.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-
 @media screen and (max-width: 768px) {
-    body {
-        margin: 0;
-        padding: 0;
-        background-image: url("../img/fondo_de_harry_potter.jpg"); 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover; 
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/fondo_de_harry_potter.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
-
-    select {
-        border: none;
-        color: #372e29;
-        background-color: #FFBD59;
-        font-family: Roboto Condensed;
-        font-size: 20px;
-        appearance: none;
-        box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
-        margin: 0 10px;
-        cursor: pointer;
-    }
+  select {
+    border: none;
+    color: #372e29;
+    background-color: #ffbd59;
+    font-family: Roboto Condensed;
+    font-size: 20px;
+    appearance: none;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    cursor: pointer;
+  }
 }

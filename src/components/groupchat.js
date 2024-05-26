@@ -1,8 +1,8 @@
 import { MessageComponent } from "./MessageComponent.js";
-import { communicateWithOpenAI } from "../lib/OpenAIApi.js";
+import { communicateWithOpenAI } from "../lib/openAIApi.js";
 
 export function groupchat(characters) {
-  const groupElement = document.createElement('div');
+  const groupElement = document.createElement("div");
   groupElement.classList.add("groupchat");
 
   groupElement.innerHTML = `
@@ -31,16 +31,15 @@ export function groupchat(characters) {
   const messageInput = groupElement.querySelector("#message-input-group");
 
   // Evento para dar enter en el input y enviar mensaje
-  messageInput.addEventListener("keydown", function(event) {
+  messageInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13 && !event.shiftKey) {
       event.preventDefault(); // Evitar salto de línea en el textarea
       form.dispatchEvent(new Event("submit"));
     }
   });
 
-
   // Maneja el envío de mensajes
-  form.addEventListener("submit", async function(event) {
+  form.addEventListener("submit", async function (event) {
     event.preventDefault();
     const messageText = messageInput.value.trim();
 
@@ -49,23 +48,27 @@ export function groupchat(characters) {
       list.appendChild(newMessage);
       messageInput.value = "";
 
-      
-
       // Obtener respuestas automáticas de todos los personajes
       for (const character of characters) {
         try {
-          communicateWithOpenAI(character.name, character.description, messageText)
-            .then(res => res.json())
-            .then(res => {
+          communicateWithOpenAI(
+            character.name,
+            character.description,
+            messageText
+          )
+            .then((res) => res.json())
+            .then((res) => {
               const responseMessage = res.choices[0].message.content;
-          
-              const characterMessage = MessageComponent(responseMessage, "received", character);
+
+              const characterMessage = MessageComponent(
+                responseMessage,
+                "received",
+                character
+              );
               list.appendChild(characterMessage);
-
-            })
-
+            });
         } catch (error) {
-          console.error("Error en la comunicación con OpenAI:", error);
+          //console.error("Error en la comunicación con OpenAI:", error);
         }
       }
     }
@@ -73,9 +76,3 @@ export function groupchat(characters) {
 
   return groupElement;
 }
-
-
-
-
-
-
