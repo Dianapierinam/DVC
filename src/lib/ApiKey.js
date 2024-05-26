@@ -6,17 +6,18 @@ export const getDataInLocalStorage = (keyName) => {
   } else {
     return JSON.parse(localStorage.getItem(keyName));
   }
-}
+};
 
 export const setDataInLocalStorage = (keyName, data) => {
-  if (typeof data === "string") {
-    localStorage.setItem(keyName, data);    
+  if (typeof data === "string" && data === "") {
+    localStorage.removeItem(keyName);
+  } else if (typeof data === "string") {
+    localStorage.setItem(keyName, data);
   } else {
     localStorage.setItem(keyName, JSON.stringify(data));
   }
-}
+};
 
 export const clearLocalStorage = () => {
   localStorage.clear();
-}
-
+};

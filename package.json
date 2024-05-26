@@ -43,5 +43,9 @@
   },
   "dependencies": {
     "eslint-plugin": "^1.0.1"
+  },
+  "eslintConfig": {
+    "extends":".node_modules/standard/esLintrc.json"
   }
+
 }

@@ -51,7 +51,7 @@ export function groupchat(characters) {
       // Obtener respuestas automáticas de todos los personajes
       for (const character of characters) {
         try {
-          communicateWithOpenAI(
+          await communicateWithOpenAI(
             character.name,
             character.description,
             messageText
@@ -68,7 +68,7 @@ export function groupchat(characters) {
               list.appendChild(characterMessage);
             });
         } catch (error) {
-          //console.error("Error en la comunicación con OpenAI:", error);
+          //   console.error("Error en la comunicación con OpenAI:", error);
         }
       }
     }
