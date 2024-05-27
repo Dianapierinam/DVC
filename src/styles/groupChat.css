@@ -1,37 +1,40 @@
 .background-chat {
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 0 auto;
-  max-height: 800px;
+  padding: 30px;
+  border-radius: 50px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  height: 800px;
   box-shadow: 0 -2px 5px rgba(219, 160, 8, 0.8);
 }
-h2 {
+h1 {
   display: block;
   margin-inline-start: 30px;
+  margin-left: 50px;
 }
 
-#group-image-chat {
+.group-image-chat {
   display: flex;
   justify-content: flex-start;
-  font-size: 23px;
-  background-color: rgba(219, 160, 8, 0.8);
-  padding: 9px;
+  align-items: center;
+  font-size: 15px;
+  background-color: rgba(219, 160, 8, 0.5);
   border-radius: 10px 10px 0 0;
   padding-right: 100px;
   z-index: 1;
 }
-#group-image {
-  width: 120px;
-  height: 120px;
+.group-image {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .character-info {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .character-image {
@@ -43,75 +46,79 @@ h2 {
 
 .character-name {
   font-weight: bold;
+  margin-left: 15px;
 }
 
 .chat-message-form-group {
   display: flex;
 }
 
-#message-input-group {
-  resize: none; /* No cambia el tamaño del textarea */
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  width: 85%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-  bottom: 80px;
-  left: 380px;
-  background-color: white;
-}
-
 .btn-send-container-group {
   display: flex;
   justify-content: flex-end;
-}
-
-.btn-send-group {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  display: flex;
   align-items: center;
-  justify-content: center;
-
-  width: 50px;
-  height: 50px;
 }
 
-#send-group {
-  height: 50px;
-  width: 50px;
-  margin-left: 40px;
-  background-color: transparent;
+.btn-chat-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btn-returnApikey-group {
+  background-color: #383c37;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  font-family: Roboto Condensed;
   cursor: pointer;
 }
 
+.btn-send-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border: none;
+}
+
+.send-group {
+  width: 35px;
+  height: 35px;
+  margin-left: 70px;
+}
+
 .chat-message-list-group {
-  margin-top: 119px;
+  height: 75%;
+  max-height: 500px;
   padding: 20px;
-  height: 280px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
 }
 
 .chat-message-list-group .message {
-  max-width: 400px;
-  padding: 10px;
+  max-width: 600px;
+  min-width: 150px;
+  padding: 20px;
   border-radius: 10px;
-  margin: 5px 0;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .chat-message-list-group .message.received {
   background-color: #4c4c4c;
-  align-self: flex-start; /* Alinea a la izquierda */
+  align-self: flex-start;
   text-align: left;
-  color: azure;
 }
 
 .chat-message-list-group .message.sent {
   background-color: #dba008;
-  align-self: flex-end; /* Alinea a la derecha */
-  text-align: right;
-  margin-left: 300px;
+  align-self: flex-end;
 }
 
 .chat-input .chat-message-form {
@@ -120,8 +127,16 @@ h2 {
   align-items: center;
 }
 
-.chat-input textarea {
-  width: 85%;
+.chat-input-group textarea {
+  resize: none;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  width: 90%;
+  height: 80px;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: white;
 }
 
 .chat-input .btn-send-container {
@@ -133,15 +148,11 @@ h2 {
 
 @media screen and (max-width: 768px) {
   .background-chat {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
-    margin-top: 50px;
-    height: 650px;
     width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    padding: 30px 15px;
   }
 
   #group-image {
@@ -151,10 +162,7 @@ h2 {
 
   #group-image-chat {
     display: flex;
-    justify-content: flex-start;
-    background-color: rgba(219, 160, 8, 0.8);
-    padding: 9px;
-    border-radius: 10px 10px 0 0;
+    align-items: center;
   }
 
   #message-input-group {
@@ -167,11 +175,6 @@ h2 {
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .btn-send-container-group {
-    display: flex;
-    align-items: flex-end;
-  }
-
   .btn-send-group {
     background-color: transparent;
     padding: 0;
@@ -182,11 +185,66 @@ h2 {
   }
 
   #send-group {
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
     background-color: transparent;
     cursor: pointer;
-    margin-top: 350px;
-    margin-left: 250px;
+  }
+
+  .group-name {
+    margin-left: 30px;
+    font-size: 22px;
+  }
+
+  .btnChat {
+    padding: 0px 25px;
+    width: auto;
+  }
+
+  .character-name {
+    margin-left: 0px;
+  }
+
+  .chat-message-list-group {
+    height: 380px;
+  }
+
+  .chat-message-list-group .message {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .chat-input .chat-message-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-input-group textarea {
+    font-size: 16px;
+    height: 50px;
+    padding: 10px;
+    width: 85%;
+  }
+
+  .chat-input-group .btn-send-container {
+    width: 15%;
+  }
+
+  #chatfondo {
+    width: 400px;
+    height: 600px;
+    margin: auto;
+  }
+
+  .btn-send img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .send-group {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
   }
 }
