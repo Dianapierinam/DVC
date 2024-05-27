@@ -1,10 +1,10 @@
 import { filterData, sortData } from "../lib/DataFunctions.js";
 import { renderCardList } from "../lib/common.js";
-import data from '../data/dataset.js';
+import data from "../data/dataset.js";
 
 export function header() {
   // Crea el elemento de encabezado
-  const headerElement = document.createElement('header');
+  const headerElement = document.createElement("header");
 
   // Agrega el contenido dinámico al encabezado
   headerElement.innerHTML = `
@@ -50,10 +50,10 @@ export function header() {
                     <option value="desc">Nombre (Z-A)</option>
                 </select>
             </div>
-            <div>
+            <div class="btn-navigation">
             <button id="chatGrupal" class="group-chat">Chat Grupal</button>
-            </div>
             <button id="filterButton" data-testid="button-clear">Borrar filtro</button>
+            </div>
             <div class="buho" id="clearData">
                 <img src="img/buho.png" alt="Buho">
                 <div class="tooltip">Revelio
@@ -67,11 +67,15 @@ export function header() {
     let datosFiltrados = data;
 
     if (elFilterCasa.value) {
-      datosFiltrados = filterData(datosFiltrados,"casaDeOrigen", elFilterCasa.value);
+      datosFiltrados = filterData(
+        datosFiltrados,
+        "casaDeOrigen",
+        elFilterCasa.value
+      );
     }
 
     if (elFilterRaza.value) {
-      datosFiltrados = filterData(datosFiltrados ,"raza", elFilterRaza.value);
+      datosFiltrados = filterData(datosFiltrados, "raza", elFilterRaza.value);
     }
 
     datosFiltrados = sortData(datosFiltrados, "name", elOrder.value);
@@ -82,7 +86,7 @@ export function header() {
   const elFilterCasa = headerElement.querySelector("#filtrarCasa");
   const elFilterRaza = headerElement.querySelector("#filtrarPorRaza");
   const elOrder = headerElement.querySelector("#order");
-  const filterButton = headerElement.querySelector('#filterButton'); 
+  const filterButton = headerElement.querySelector("#filterButton");
 
   elFilterCasa.addEventListener("change", filterChange);
   elFilterRaza.addEventListener("change", filterChange);
@@ -90,17 +94,11 @@ export function header() {
 
   filterButton.addEventListener("click", borrarFiltros);
   function borrarFiltros() {
-    elFilterCasa.value = ""; 
-    elFilterRaza.value = ""; 
+    elFilterCasa.value = "";
+    elFilterRaza.value = "";
     elOrder.value = "";
-    filterChange(); 
+    filterChange();
   }
 
   return headerElement;
 }
-
-
-
-
-
-  

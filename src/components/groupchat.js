@@ -10,7 +10,7 @@ export function groupchat(characters) {
     <div class="background-chat">
       <div id="group-image-chat">
         <img id="group-image" src="https://puzzlemania-154aa.kxcdn.com/products/2021/puzzle-clementoni-500-pieces-harry-potter-500.jpg" alt="Imagen del grupo">
-        <h2 class="group-name">Hogwarts</h2>
+        <h2 class="group-name">El gran comedor de Hogwarts</h2>
       </div>
       <ul id="message-list-group" class="chat-message-list-group"></ul>
       <div id="chat-input-group" class="chat-input-group">

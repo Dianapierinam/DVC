@@ -7,8 +7,10 @@ export function ChatComponent(character) {
   chatElement.classList.add("chat");
 
   chatElement.innerHTML = `
+      <div class="btnChat">
         <button onclick="history.back()" class="btn-return">Regresar</button>
         <button onclick="goToApiKey()" class="btn-returnApikey">Introduce la llave mágica</button>
+      </div>
         <div class="chat-container">
             <div class="chat-character">
                 <img class="character-picture" src="${character.imageUrl}" alt=""/>
