@@ -1,4 +1,4 @@
-import { computeStats } from "../lib/DataFunctions.js";
+import { computeStats } from "../lib/dataFunctions.js";
 import data from '../data/dataset.js';
 
 export function CalculationComponent() {
@@ -6,11 +6,6 @@ export function CalculationComponent() {
   const year = computeStats(data);
 
   calculationElement.innerHTML = `
-        <div id="mostrar-grafica">
-            <div id="mostrar-mensaje">
-                <h3>No se han encontrado resultados</h3>
-            </div>
-            </div>
             <div id="calculation">
                 <img class="gif" src="img/G75K.gif" alt="">
                 <div class="textpromedio">
@@ -21,7 +16,7 @@ export function CalculationComponent() {
                 </div>
             </div>
             <div class="returnmobile">
-                <button onclick="history.back()" id="return">Regresar</button>
+                <button onclick="history.back()" id="returnCal">Regresar</button>
             </div>
         <div id="varita"></div>
     `;

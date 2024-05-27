@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin: 100px 0px;
+    gap: 120px; 
 }
 
 .gif {
@@ -25,14 +26,14 @@
     box-shadow: 0 0 20px rgba(234, 190, 63, 1);
 }
 
-.btn-return {
-    background-color: #383C37;
-    color: white;
+#returnCal {
+    background-color: #d4d8d4;
+    color: black;
     border: none;
     padding: 15px 20px; 
     border-radius: 20px;
-    top: 200px; 
-    margin-right: 200px; 
+    margin-bottom: 50px; 
+    margin-left: 50%; 
     font-family: Roboto Condensed;
     cursor: pointer;
 }
@@ -64,8 +65,15 @@
         color: #eabe3f;
         box-shadow: 0 0 20px rgba(234, 190, 63, 1);
     }
-    .returnmobile {
-        margin-left: 75%;
-        margin-top: 10%;
+    #returnCal {
+        background-color: #d4d8d4;
+        color: black;
+        border: none;
+        padding: 15px 20px; 
+        border-radius: 20px;
+        margin-bottom: 50px; 
+        margin-left: 45%; 
+        font-family: Roboto Condensed;
+        cursor: pointer;
     }
     }
