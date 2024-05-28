@@ -1,0 +1,68 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#grupo-error {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.harrypotter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.imgError {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cuadro {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  height: 10%;
+  width: 30%;
+}
+
+.mensaje-error h3 {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .imgError {
+    width: 100%;
+    height: 120vh;
+    display: block;
+  }
+  .cuadro {
+    top: 105%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+  }
+  #grupo-error {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
