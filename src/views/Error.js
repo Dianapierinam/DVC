@@ -1,13 +1,17 @@
-// Error.js
-
-// Define la vista de error
 const ErrorView = () => {
   const element = document.createElement("div");
   element.innerHTML = `
-    <p class="titleError">Error: Page not found</p>
-    <div class="harrypotter">
-      <img class="imgdog" src="img/perritoIA-HP.jpeg" alt="Imagen de perrito">
-    </div>
+  <div id="grupo-error">
+  <div class="harrypotter">
+    <img class="imgError" src="img/error.jpg" alt="Fondo de error">
+  </div>
+  <div class="cuadro">
+    <p class="mensaje-error">
+      <h3>La página a la que ingresaste no es la correcta, verifica que el enlace sea correcto.</h3>
+    </p>
+  </div>
+</div>
+
   `;
   return element;
 };
