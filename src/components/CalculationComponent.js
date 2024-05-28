@@ -1,4 +1,4 @@
-import { computeStats } from "../lib/DataFunctions.js";
+import { computeStats } from "../lib/dataFunctions.js"
 //import { header } from "./header.js";
 import data from "../data/dataset.js";
 

@@ -4,6 +4,8 @@ import { navigateTo } from "../router.js";
 export default function ApiKey() {
   // Crea el elemento de encabezado
   const elApiKey = document.createElement("div");
+  // const Textllave = document.createElement("h3");
+  // const enterAPI = document.createElement("button");
 
   // Agrega el contenido dinámico al encabezado
   elApiKey.innerHTML = `
