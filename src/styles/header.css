@@ -1,60 +1,57 @@
 @media screen and (max-width: 768px) {
-    header {
-        text-align: center;
-        padding: 7px 0;
-    }
-    
-    .check {
-        display: none;
-    }
-    
-    .titulo img {
-        max-width: 150px;
-        margin-left: 10px;
-    }
+  header {
+    text-align: center;
+    padding: 7px 0;
+  }
 
-    .buho {
-        position: fixed;
-        right: -100%;
-        bottom: 10px;
-        width: 80px;
-        transition: all .3s ease;
-    }
+  .check {
+    display: none;
+  }
 
-    .buho img {
-        width: 100%;
-    }
+  .titulo img {
+    max-width: 150px;
+    margin-left: 10px;
+  }
 
-    .tooltip {
-        display: none;
-    }
-    
-    .check {
-        background-color: initial;
-        cursor: default;
-        appearance: auto;
-        box-sizing: border-box;
-        margin: 3px 3px 3px 4px;
-        padding: initial;
-        border: initial;
-    }
-     
-    .checkbtn {
-        display: block;
-        cursor: pointer;
-        float: right; 
-        margin-right: 20px;
-        margin-top: 20px;
-        }
-    
-    
-    .checkbtn img {
-        background-color: #ccc;
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        width: 24px;
-        height: auto;
-    }
+  .buho {
+    position: fixed;
+    bottom: 40px;
+    width: 80px;
+    transition: all 0.3s ease;
+  }
 
+  .buho img {
+    width: 100%;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .check {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+  }
+
+  .checkbtn {
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .checkbtn img {
+    background-color: #ccc;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 24px;
+    height: auto;
+  }
 }
